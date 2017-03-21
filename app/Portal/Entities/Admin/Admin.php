@@ -4,9 +4,12 @@ namespace App\Portal\Entities\Admin;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
+
 
 class Admin extends Authenticatable
 {
+    use EntrustUserTrait;
     use Notifiable;
 
     protected $guard = 'admin';

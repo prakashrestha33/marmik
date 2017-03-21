@@ -91,6 +91,7 @@ return [
             'admins' => [
                 'driver' => 'eloquent',
                 'model' => App\Portal\Entities\Admin\Admin::class,
+                'table' => 'admins',
             ],
         ],
         // 'users' => [

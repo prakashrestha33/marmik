@@ -6,10 +6,13 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
+                    @role('admin')
                     <div class="box-header">
                         <h3 class="box-title">Shipment Details</h3>
                     </div>
+                    @endrole
                     <!-- /.box-header -->
+                   @role('staff')
                     <div class="box-body">
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
@@ -34,6 +37,7 @@
                             @endforeach
                         </table>
                     </div>
+                    @endrole
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
