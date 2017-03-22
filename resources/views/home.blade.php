@@ -4,12 +4,8 @@
 
 
                     <div class="container">
-                           @role('staff')
-                            <h5 align="left" style="margin-top: 30px">Staff</h5>
-                            @endrole
-                        @role('admin')
+
                         <h5 align="left" style="margin-top: 30px">Shipments</h5>
-                        @endrole
                         <div class="fixed-action-btn vertical click-to-toggle">
                             <a class="btn-floating btn-large indigo darken-1">
                                 <i class="material-icons">add</i>
@@ -37,10 +33,6 @@
                         </div>
 
                     </div>
-
-
-
-
 
 
 @endsection

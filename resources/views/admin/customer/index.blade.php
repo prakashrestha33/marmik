@@ -8,29 +8,28 @@
                 <div class="box">
                     @role('admin')
                     <div class="box-header">
-                        <h3 class="box-title">Shipment Details</h3>
+                        <h3 class="box-title">Customer Details</h3>
                     </div>
+
 
                     <div class="box-body">
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>Shipment ID</th>
-                                <th>Sender</th>
-                                <th>Receiver</th>
-                                <th>Date of Departure</th>
-                                <th>Date of Delivery</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>email</th>
+
                             </tr>
                             </thead>
                             <tbody>
 
-                            @foreach($viewall as $list)
+                            @foreach($customerlist as $list)
                             <tr>
                                 <td>{{$list->id}}</td>
-                                <td> {{$list->customer_name}}</td>
-                                <td>{{$list->receiver_name}}</td>
-                                <td> {{$list->customer_name}}</td>
-                                <td>{{$list->customer_name}}</td>
+                                <td> {{$list->name}}</td>
+                                <td>{{$list->email}}</td>
+
                             </tr>
                             @endforeach
                         </table>
@@ -45,6 +44,6 @@
         <!-- /.row -->
     </section>
     @role('staff')
-
+    <h2>for the staff view</h2>
     @endrole
 @endsection
