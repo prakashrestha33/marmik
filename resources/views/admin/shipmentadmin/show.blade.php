@@ -33,6 +33,14 @@
                 <label class="col-sm-6 "> Street Name :</label>
                 {{$shipid->delivery_street_name}}
             </div>
+             <div class="row">
+                <label class="col-sm-6 "> Departure date :</label>
+                {{$shipid->departure_date}}
+            </div>
+            <div class="row">
+                <label class="col-sm-6 "> Delivery Date :</label>
+                {{$shipid->delivery_date}}
+            </div>
 
         </div>
     @endif

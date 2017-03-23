@@ -2,18 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Portal\Services\PackageService;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
+     * @var PackageService
+     */
+    private $packageService;
+
+    /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(PackageService $packageService)
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
+        $this->packageService = $packageService;
     }
 
     /**
@@ -23,6 +30,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $package= $this->packageService->getpackage();
+
+        return view('home',compact('package'));
     }
 }

@@ -26,6 +26,8 @@ class CreateShipmentsTable extends Migration
             $table->string('delivery_street_name')->nullable();
             $table->string('delivery_home_no');
             $table->bigInteger('tracking_id');
+            $table->date('departure_date');
+            $table->date('delivery_date');
             $table->timestamps();
 //            $table->foreign('customer_id')->references('id')->on('customers')
 //                ->onUpdate('cascade')->onDelete('cascade');

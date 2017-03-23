@@ -38,6 +38,50 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('contact') ? ' has-error' : '' }}">
+                            <label for="contact" class="col-md-4 control-label">Contact</label>
+
+                            <div class="col-md-6">
+                                <input id="contact" type="text" class="form-control" name="contact" value="{{ old('contact') }}" required autofocus>
+
+                                @if ($errors->has('contact'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('contact') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+                            <label for="address" class="col-md-4 control-label">Address</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}" required autofocus>
+
+                                @if ($errors->has('address'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('membership') ? ' has-error' : '' }} clearfix">
+                            <label for="membership" class="col-sm-4 control-label">Membership</label>
+
+                            <div class="checkbox col-sm-8">
+
+                                <label>
+                                    <input name="membership" type="radio" value="1" checked>
+                                    Active
+                                </label>
+                                <label>
+                                    <input name="membership" type="radio" value="0">
+                                    Inactive
+                                </label>
+                            </div>
+                        </div>
+
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 

@@ -18,7 +18,9 @@ class Shipment extends Model
         'customer_name', 'receiver_name', 'shipment_type',
         'package_id', 'delivery_country', 'delivery_state',
         'delivery_city', 'delivery_street_name', 'delivery_home_no',
-        'tracking_id'
+        'tracking_id',
+        'delivery_date',
+        'departure_date'
 
 
     ];
