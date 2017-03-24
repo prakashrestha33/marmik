@@ -42,5 +42,26 @@ class PackageRepository
         return $this->package->select('*')->get();
     }
 
+    public function getPackageId($id)
+    {
+        return $this->package->select('*')->where('id',$id)->first();
+    }
+
+    public function updatePackage($formData, $id)
+    {
+        try {
+           $data= Package::find($id);
+           $data->type=$formData['type'];
+           $data->weight=$formData['weight'];
+           $data->price=$formData['price'];
+           $data->update();
+
+            return true;
+        } catch (QueryException $e) {
+            return false;
+        }
+
+    }
+
 
 }

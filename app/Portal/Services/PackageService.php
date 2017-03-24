@@ -39,5 +39,16 @@ class PackageService
         return $this->packageRepository->getPackage();
     }
 
+    public function getpackageid($id)
+    {
+        return $this->packageRepository->getPackageId($id);
+    }
+
+    public function update_package($request, $id)
+    {
+        $formData=$request->all();
+        return $this->packageRepository->updatePackage($formData,$id);
+    }
+
 
 }

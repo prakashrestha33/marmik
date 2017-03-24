@@ -11,8 +11,8 @@
                     </div>
 
                     <div align="right" style="padding: 10px">
-                        <a href="{{route('package.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Create package</span>
+                        <a href="{{route('staff.create')}}">
+                            <span class=" btn btn-sm btn-success" title="Create new category">Create staff</span>
                         </a>
                     </div>
 
@@ -20,22 +20,23 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>Type ID</th>
-                                <th>Type</th>
-                                <th>Weight</th>
-                                <th>Price </th>
-                                <th>Remark </th>
+                                <th> ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>email </th>
+                                <th>Created at </th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($package as $list)
+                            @foreach($staff as $list)
                                 <tr>
                                     <td>{{$list->id}}</td>
-                                    <td> {{$list->type}}</td>
-                                    <td>{{$list->weight}} kg</td>
-                                    <td> {{$list->price}}/kg</td>
+                                    <td> {{$list->firstName}}</td>
+                                    <td>{{$list->lastName}}</td>
+                                    <td> {{$list->email}}</td>
+                                    <td> {{$list->created_at}}</td>
                                     <td>
-                                        <a href="{{route('package.edit',$list->id)}}">
+                                        <a href="{{route('staff.edit',$list->id)}}">
                                             <button class="btn btn-warning pad" data-toggle="popover" data-trigger="hover"
                                                     data-placement="top" data-content="Edit the {{$list->id}} delivery">
                                                 <i class="fa fa-edit">edit</i>

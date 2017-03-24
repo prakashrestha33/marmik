@@ -74,7 +74,8 @@ class PackageAdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $package= $this->packageService->getpackageid($id);
+       return view('admin.package.edit',compact('package'));
     }
 
     /**
@@ -86,7 +87,10 @@ class PackageAdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if ($this->packageService->update_package($request,$id)) {
+            return redirect()->route('package.index')->withSuccess("Package updated !");
+        }
+        return back()->withErrors("Something went wrong");
     }
 
     /**
