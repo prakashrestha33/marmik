@@ -16,9 +16,8 @@
 {!!Html::style('css/all.css') !!}
 <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-{!! Html::style('css/_all-skins.min.css') !!}
-{!! Html::style('css/custom.css') !!}
-
+    {!! Html::style('css/_all-skins.min.css') !!}
+    {!! Html::style('css/custom.css') !!}
 
 
     <script>
@@ -54,7 +53,8 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -66,7 +66,8 @@
                                             Logout
                                         </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                              style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
@@ -74,7 +75,6 @@
                             </li>
                         @endif
                     </ul>
-
 
 
                     </li>
@@ -90,30 +90,46 @@
         <section class="sidebar">
 
             <li class="active treeview">
-                <ul> <a href="/admin/shipment">
-                  <i class="fa fa-dashboard"></i> <span>Shipment</span>
+                <ul><a href="/admin/shipment">
+                        <i class="fa fa-dashboard"></i> <span>Shipment</span>
 
-                </a> </ul>
+                    </a></ul>
+            </li>
+            <li>
+                <ul><a href="/admin/package">
+                        <i class="fa fa-user"></i> <span>Package</span>
 
-               <ul> <a href="/admin/package">
-                    <i class="fa fa-user"></i> <span>Package</span>
+                    </a>
+                </ul>
 
-                </a>
-               </ul>
+            </li>
+            <li>
+                <ul><a href="/admin/packages/report">
+                        <i class="fa fa-user"></i> <span>Package Report</span>
+
+                    </a>
+                </ul>
+
+            </li>
+            <li>
+                <ul><a href="/admin/customer">
+                        <i class="fa fa-user"></i> <span>Customer</span>
+
+                    </a>
+                </ul>
 
             </li>
 
-            {{--<li class="active">--}}
-                {{--<a href="/admin/category">--}}
-                    {{--<i class="fa fa-dashboard"></i> <span>Category</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
-            {{--<li class="active">--}}
-                {{--<a href="/admin/product">--}}
-                    {{--<i class="fa fa-dashboard"></i> <span>Product</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
 
+            @role('admin')
+            <li class="active">
+                <ul>
+                    <a href="/admin/staff">
+                        <i class="fa fa-users"></i> <span>Staff</span>
+                    </a>
+                </ul>
+            </li>
+            @endrole
 
 
         </section>

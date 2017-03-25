@@ -27,6 +27,5 @@ class roleSeeder extends Seeder
             "description" => "conducts overall operations",
         ]);
 
-
     }
 }

@@ -10,6 +10,7 @@ namespace App\Portal\Services;
 
 
 use App\Portal\Repositories\PackageRepository;
+use App\Portal\Repositories\PackageLostRepository;
 
 class PackageService
 {
@@ -19,10 +20,15 @@ class PackageService
      * @var PackageRepository
      */
     private $packageRepository;
+    /**
+     * @var PackageLostRepository
+     */
+    private $packageLostRepository;
 
-    public function __construct(PackageRepository $packageRepository)
+    public function __construct(PackageRepository $packageRepository,PackageLostRepository $packageLostRepository)
     {
         $this->packageRepository = $packageRepository;
+        $this->packageLostRepository = $packageLostRepository;
     }
 
     public function addPackage($request)
@@ -48,6 +54,18 @@ class PackageService
     {
         $formData=$request->all();
         return $this->packageRepository->updatePackage($formData,$id);
+    }
+
+    public function addPackagereport($request)
+    {
+        $formData=$request->all();
+        $formData = array_except($formData, ['_token', 'to', 'remove']);
+        return $this->packageLostRepository->addPackageReport($formData);
+    }
+
+    public function getpackagereports()
+    {
+        return $this->packageLostRepository->getPackageReports();
     }
 
 

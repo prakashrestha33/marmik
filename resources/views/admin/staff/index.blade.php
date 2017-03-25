@@ -1,7 +1,7 @@
 @extends('Layout.app')
 
 @section('main-content')
-
+@role('admin')
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -56,9 +56,7 @@
             </div>
             <!-- /.col -->
         </div>
-        <!-- /.row -->
+        @endrole
     </section>
-    @role('staff')
 
-    @endrole
 @endsection

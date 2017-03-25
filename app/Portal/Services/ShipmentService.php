@@ -43,4 +43,12 @@ class ShipmentService
         $data= $this->shipmentRepository->singleshippment($id);
         return $data;
     }
+
+    public function update_shipment($request, $id)
+    {
+        $formData=$request->all();
+        return $this->shipmentRepository->updateShipment($formData,$id);
+    }
+
+
 }

@@ -12,3 +12,4 @@ Route::get('/staff/{id}/edit', 'AdminController@editStaff')->name('staff.edit');
 Route::post('/staff/store', 'AdminController@storeStaff')->name('staff.store');
 Route::put('/staff/{id}/update', 'AdminController@updateStaff')->name('staff.update');
 
+Route::get('/packages/report', 'PackageAdminController@reportList')->name('package.report');

@@ -26,6 +26,7 @@ class AdminService
     public function storestaff($request)
     {
         $formData=$request->all();
+        $formData['password']= bcrypt($formData['password']);
         return $this->adminRepository->store_staff($formData);
     }
 

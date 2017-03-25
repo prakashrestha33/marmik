@@ -80,7 +80,8 @@ class ShipmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $shipid=$this->shipmentService->getshipmentId($id);
+        return view('admin/shipmentadmin/edit',compact('shipid'));
     }
 
     /**
@@ -92,7 +93,10 @@ class ShipmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if ($this->shipmentService->update_shipment($request,$id)) {
+            return redirect()->route('shipment.index')->withSuccess("Shipment updated !");
+        }
+        return back()->withErrors("Something went wrong");
     }
 
     /**

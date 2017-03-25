@@ -22,3 +22,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 Route::get('/admin', 'Admin\AdminController@index')->name('admin.dashboard');
+
+Route::get('/package/lost', 'PackageController@create')->name('package.lost');
+Route::post('/package/report', 'PackageController@report')->name('package.report');

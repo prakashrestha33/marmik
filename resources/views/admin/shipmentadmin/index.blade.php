@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
-                    @role('admin')
+
                     <div class="box-header">
                         <h3 class="box-title">Shipment Details</h3>
                     </div>
@@ -21,7 +21,7 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>Shipment ID</th>
+                                <th>Tracking ID</th>
                                 <th>Sender</th>
                                 <th>Receiver</th>
                                 <th>Date of Departure</th>
@@ -33,22 +33,27 @@
 
                             @foreach($viewall as $list)
                             <tr>
-                                <td>{{$list->id}}</td>
+                                <td>{{$list->tracking_id}}</td>
                                 <td> {{$list->customer_name}}</td>
                                 <td>{{$list->receiver_name}}</td>
                                 <td> {{$list->departure_date}}</td>
                                 <td>{{$list->delivery_date}}</td>
-                                <td>  <div align="right" style="padding: 10px">
+                                <td>
                                         <a href="{{route('shipment.show',$list->id)}}">
                                             <span class=" btn btn-sm btn-primary" title="View details">Detail</span>
                                         </a>
-                                    </div>
+                                    <a href="{{route('shipment.edit',$list->id)}}">
+                                        <button class="btn btn-warning pad" data-toggle="popover" data-trigger="hover"
+                                                data-placement="top" data-content="Edit the {{$list->id}} delivery">
+                                            <i class="fa fa-edit">edit</i>
+                                        </button>
+                                    </a>
                                 </td>
                             </tr>
                             @endforeach
                         </table>
                     </div>
-                    @endrole
+
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->

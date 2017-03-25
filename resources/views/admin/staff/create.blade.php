@@ -2,12 +2,7 @@
 
 @section('main-content')
 
-
-        <!-- Main content -->
-
-
-   <!-- Main content -->
-    <section class="content">
+    @role('admin')
         <h2>Create Staff </h2>
                     {!! Form::open(array('route'=>'staff.store', 'method'=>'post' ))!!}
 
@@ -65,8 +60,7 @@
             {!! Form::close() !!}
 
         </div>
-    </section>
-    <!-- /.content -->
+   @endrole
 
     @endsection
 

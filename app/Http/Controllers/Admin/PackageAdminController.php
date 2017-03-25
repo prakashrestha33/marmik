@@ -103,4 +103,10 @@ class PackageAdminController extends Controller
     {
         //
     }
+    public  function reportList()
+    {
+        $packagereport= $this->packageService->getpackagereports();
+//        dd($packagereport);
+        return view('admin.package.lost_package_list',compact('packagereport'));
+    }
 }

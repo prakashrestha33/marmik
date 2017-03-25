@@ -15,7 +15,7 @@ class Shipment extends Model
      * @var array
      */
     protected $fillable = [
-        'customer_name', 'receiver_name', 'shipment_type',
+        'customer_name', 'receiver_name', 'shipment_type','receiver_mobile_no',
         'package_id', 'delivery_country', 'delivery_state',
         'delivery_city', 'delivery_street_name', 'delivery_home_no',
         'tracking_id',

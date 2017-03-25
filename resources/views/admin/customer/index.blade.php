@@ -19,6 +19,9 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>email</th>
+                                <th>Contact</th>
+                                <th>Address</th>
+                                <th>Member</th>
 
                             </tr>
                             </thead>
@@ -29,6 +32,9 @@
                                 <td>{{$list->id}}</td>
                                 <td> {{$list->name}}</td>
                                 <td>{{$list->email}}</td>
+                                <td>{{$list->contact}}</td>
+                                <td>{{$list->address}}</td>
+                                <td>{{$list->member}}</td>
 
                             </tr>
                             @endforeach
