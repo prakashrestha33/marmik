@@ -1,95 +1,74 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+    <link href="{{ asset('css/mater/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
+    <link href="{{ asset('css/mater/materialize.min.css') }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PosTrack</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
 
-        <title>Laravel</title>
+        .theBack {
+            font-size: 50px;
+            font-weight: 200;
+        }
+    </style>
+</head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+    <div class="background" style="background-color: #1565c0; height: 280px;">
+        <div class="center-align">
+            <img src="logo.PNG" height="120px" width="200px" style="margin-top: 90px">
+        </div>
+        <div class="center-align" style="margin-top: 20px">
+            <div>
+                <h5 style="font-size: 19px; font-weight: 300">
+                    <a  href="{{ route('login') }}" class="white-text text-darken-1" style="font-family: "><i
+                                class="material-icons center-align">person_pin</i> Sign In</a>&nbsp &nbsp &nbsp &nbsp
+                    <a href="{{ route('register') }}" class="white-text text-darken-1"><i
+                                class="material-icons center-align">assignment_ind</i> Register</a>
+                </h5>
             </div>
         </div>
-    </body>
+    </div>
+    <div class="container" style="text-align: center">
+        <h1 style="font-weight: 200">
+            <b style="font-weight: 400">PosTracker</b>
+            <span class="theBack"> Is Here to Fulfill All of Your <br> Postal and Cargo Tracking Needs</span>
+        </h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card-panel grey lighten-3" href="">
+                <span class="black-text">Lorem Ipsum</span>
+                <a class="btn btn-primary" href="/package/lost"> Report loss</a>
+
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card-panel grey lighten-3">
+                <span class="black-text">Lorem Ipsum</span>
+                <a class="btn btn-primary" href="/package/track"> Report loss</a>
+
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card-panel grey lighten-3">
+                <span class="black-text">Lorem Ipsum</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+@include('layouts.footer')
+</body>
 </html>

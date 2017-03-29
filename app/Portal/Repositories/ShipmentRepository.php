@@ -75,4 +75,12 @@ class ShipmentRepository
         }
 
     }
+
+
+    public function getPackagebyTracking($tracking_id)
+    {
+        $query=$this->shipment->select('*')->where('tracking_id',$tracking_id)->first();
+        return $query;
+    }
+
 }

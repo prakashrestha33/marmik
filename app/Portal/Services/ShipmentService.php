@@ -51,4 +51,13 @@ class ShipmentService
     }
 
 
+    public function getpackagebytrack($request)
+    {
+
+        $data=$request->all();
+        $tid=$data['tracking_id'];
+        return $this->shipmentRepository->getPackagebyTracking($tid);
+    }
+
+
 }

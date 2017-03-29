@@ -25,3 +25,8 @@ Route::get('/admin', 'Admin\AdminController@index')->name('admin.dashboard');
 
 Route::get('/package/lost', 'PackageController@create')->name('package.lost');
 Route::post('/package/report', 'PackageController@report')->name('package.report');
+
+Route::get('/package/track', 'PackageController@track')->name('package.track');
+Route::post('/package/gettrack', 'PackageController@gettrack')->name('package.gettrack');
+Route::get('/package/tracked', 'PackageController@tracked')->name('package.tracked');
+Route::get('/package/pickup', 'PackageController@pickup')->name('package.pickup');
