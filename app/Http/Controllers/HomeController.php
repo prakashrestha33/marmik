@@ -31,6 +31,6 @@ class HomeController extends Controller
     {
         $package= $this->packageService->getpackage();
 
-        return view('front.packagecomplain',compact('package'));
+        return view('welcome',compact('package'));
     }
 }

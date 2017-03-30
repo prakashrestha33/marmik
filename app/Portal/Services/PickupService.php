@@ -36,4 +36,10 @@ class PickupService
         return $this->pickupRepository->getPickupDetail($id);
     }
 
+    public function getpickupdetailbycusid($id)
+    {
+        return $this->pickupRepository->getPickupDetailByCusid($id);
+
+    }
+
 }

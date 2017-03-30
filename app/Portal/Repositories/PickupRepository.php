@@ -39,4 +39,9 @@ class PickupRepository
         return $this->pickup->select('*')->where('id',$id)->first();
     }
 
+    public function getPickupDetailByCusid($id)
+    {
+        return $this->pickup->select('*')->join('packages','packages.id','pickups.package_id')->where('customer_id',$id)->get();
+    }
+
 }

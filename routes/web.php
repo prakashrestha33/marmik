@@ -36,4 +36,5 @@ Route::get('/package/pickup', 'CustomerController@pickup')->name('package.pickup
 Route::post('/package/pickup', 'CustomerController@pickupstore')->name('package.pickup.request');
 
 Route::get('/package/{id}/checkout', 'CustomerController@checkout')->name('package.checkout');
+Route::get('/profile/{id}/history', 'CustomerController@history')->name('profile.history');
 

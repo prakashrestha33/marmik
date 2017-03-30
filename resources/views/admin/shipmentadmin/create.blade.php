@@ -71,19 +71,25 @@
                         </select>
                     </div>
                 </div>
-                <div class="row clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label pad">
-                        <label for="country_name">Country</label>
-                    </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                <select class="form-control show-tick" id="delivery_country" name="delivery_country" >
-                                    <option value="">-- Please select --</option>
-                                    <option value="Small">Small</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="Large">Large</option>
-                                </select>
-                            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label pad">
+                    <label for="country">Country</label>
                 </div>
+
+                <?php $x = Config::get('country');?>
+
+                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <select name="country" class="form-control" required>
+                        <option selected="selected" disabled>Choose Country</option>
+                        @foreach($x as $code=>$name)
+                            <option value="{{$name}}">
+                                {{$name}}
+                            </option>
+                        @endforeach
+
+                    </select>
+                </div>
+            </div>
                 <div class="row clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                         <label for="city_name">City</label>

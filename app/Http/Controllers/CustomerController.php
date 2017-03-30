@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Portal\Services\PackageService;
 use App\Portal\Services\PickupService;
+use App\Portal\Services\ShipmentService;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -17,12 +18,17 @@ class CustomerController extends Controller
      * @var PickupService
      */
     private $pickupService;
+    /**
+     * @var ShipmentService
+     */
+    private $shipmentService;
 
-    public function __construct(PackageService $packageService,PickupService $pickupService)
+    public function __construct(PackageService $packageService,PickupService $pickupService,ShipmentService $shipmentService)
     {
         $this->middleware('auth');
         $this->packageService = $packageService;
         $this->pickupService = $pickupService;
+        $this->shipmentService = $shipmentService;
     }
 
 
@@ -43,6 +49,15 @@ class CustomerController extends Controller
     public function checkout($id)
     {
         $pickup=$this->pickupService->getpickupdetail($id);
-        return view('front.checkout',compact('pickup'));
+        $package=$this->packageService->getpackageid($pickup->package_id);
+
+        return view('front.checkout',compact('pickup','package'));
+    }
+
+    public function history($id)
+    {
+        $pickup=$this->pickupService->getpickupdetailbycusid($id);
+
+        return view('front.history',compact('pickup'));
     }
 }

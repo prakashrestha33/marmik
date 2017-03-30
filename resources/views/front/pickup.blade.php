@@ -2,7 +2,24 @@
 
 @section('content')
 
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background" style="background-color: #3949ab">
+                </div>
+                <a href="#!user"><img class="circle" src="customqs.png"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">shopping_cart</i>Shipment</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">redeem</i>Request Pickup</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">search</i>Lost Packages</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Log Out</a></li>
+    </ul>
 
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons small">menu</i></a>
 
     <div class="container">
         <h5 align="left" style="margin-top: 30px">Request Pickup</h5>
@@ -61,7 +78,7 @@
     </div>
 
 
-
 @endsection
+
 
 
