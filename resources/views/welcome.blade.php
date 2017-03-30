@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link href="{{ asset('css/mater/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
-    <link href="{{ asset('css/mater/materialize.min.css') }}" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>PosTrack</title>
+@extends('layouts.app')
+
+@section('content')
+
     <style>
         body {
             background-color: #f5f5f5;
@@ -16,7 +12,7 @@
             font-weight: 200;
         }
     </style>
-</head>
+
 
 <div>
     <!--Import jQuery before materialize.js-->
@@ -57,18 +53,20 @@
         <div class="col s12 m4">
             <div class="card-panel grey lighten-3">
                 <span class="black-text">Lorem Ipsum</span>
-                <a class="btn btn-primary" href="/package/track"> Report loss</a>
+                <a class="btn btn-primary" href="/package/track">Track Your Package</a>
 
             </div>
         </div>
         <div class="col s12 m4">
             <div class="card-panel grey lighten-3">
-                <span class="black-text">Lorem Ipsum</span>
+                <span class="black-text" >Lorem Ipsum</span>
+                <a class="btn btn-primary" href="/package/pickup">Request package pickup</a>
+
             </div>
         </div>
     </div>
 
 </div>
+    @endsection
 @include('layouts.footer')
-</body>
-</html>
+

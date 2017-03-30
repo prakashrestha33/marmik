@@ -11,9 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/mater/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
-    <link href="{{ asset('css/mater/materialize.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/master/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/icon.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/master/materialize.min.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

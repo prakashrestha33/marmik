@@ -54,9 +54,6 @@ class PackageController extends Controller
         return back()->withErrors("Check Tracking Id once more");
     }
 
-public function pickup()
-{
-    return view('front.pickup');
-}
+
 
 }

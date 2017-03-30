@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('landing');
 
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
@@ -29,4 +29,11 @@ Route::post('/package/report', 'PackageController@report')->name('package.report
 Route::get('/package/track', 'PackageController@track')->name('package.track');
 Route::post('/package/gettrack', 'PackageController@gettrack')->name('package.gettrack');
 Route::get('/package/tracked', 'PackageController@tracked')->name('package.tracked');
-Route::get('/package/pickup', 'PackageController@pickup')->name('package.pickup');
+
+
+
+Route::get('/package/pickup', 'CustomerController@pickup')->name('package.pickup');
+Route::post('/package/pickup', 'CustomerController@pickupstore')->name('package.pickup.request');
+
+Route::get('/package/{id}/checkout', 'CustomerController@checkout')->name('package.checkout');
+
