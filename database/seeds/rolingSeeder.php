@@ -2,7 +2,6 @@
 
 use App\Roleuser;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class rolingSeeder extends Seeder
 {
