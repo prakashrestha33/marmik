@@ -32,6 +32,8 @@ class EntrustSetupTables extends Migration
             $table->timestamps();
 
             $table->primary(['user_id', 'role_id']);
+            $table->timestamps();
+
         });
 
         // Create table for storing permissions
