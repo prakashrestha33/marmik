@@ -25,7 +25,6 @@
 <body>
 <div id="app">
     <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -38,7 +37,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{asset('image/logo.png')}}" height="100px">
+                    <img src="{{asset('image/logo.png')}}" height="45px">
                 </a>
             </div>
 
@@ -77,6 +76,5 @@
                     @endif
                 </ul>
             </div>
-        </div>
     </nav>
 </div>

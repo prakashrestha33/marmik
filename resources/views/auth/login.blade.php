@@ -54,8 +54,8 @@
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
+                                <a class="btn btn-link red darken-1" href="{{ route('password.request') }}">
+                                    Forgot Password
                                 </a>
                             </div>
                         </div>

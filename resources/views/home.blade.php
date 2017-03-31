@@ -14,7 +14,6 @@
                         <div class="box-header">
                             <h3 class="box-title">Package type</h3>
                         </div>
-
                         <div class="box-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
