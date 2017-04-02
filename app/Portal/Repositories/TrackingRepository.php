@@ -29,8 +29,8 @@ class TrackingRepository
 
     public function insert($request)
     {
-        $result =$this->trackingPost->create($request);
-        if (isNull($result)){
+        $result =$this->trackingPost->insert($request);
+        if (!$result){
             return null;
         }
         return $result;

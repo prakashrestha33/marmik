@@ -31,6 +31,8 @@ class TrackingService
 
     public function checkbatch($request)
     {
+        dd($request['batch_id']);
+        $data = $this->trackingRepository->checkBatch();
         $result=$this->trackingRepository->insert($request);
 
         if ($result ==null){

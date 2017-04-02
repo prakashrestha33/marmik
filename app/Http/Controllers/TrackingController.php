@@ -25,7 +25,6 @@ class TrackingController extends Controller
     public function track(Request $request){
 
         $data = $request->all();
-        $data = array_except($data, ['_token', 'to', 'remove']);
 
         $response = $this->trackingService-> checkbatch($data);
 
