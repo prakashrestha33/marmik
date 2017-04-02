@@ -10,6 +10,7 @@ namespace App\Portal\Repositories;
 
 
 use App\Portal\Entities\Admin\Admin;
+use App\Roleuser;
 use Illuminate\Database\QueryException;
 
 class AdminRepository
@@ -27,11 +28,22 @@ class AdminRepository
     public function store_staff($formData)
     {
         try {
-            $this->admin->create($formData);
+           if( $data=$this->admin->create($formData));
+            {
+                $userRole = [
+                    'user_id' => $data['id'],
+                    'role_id' => 2
+                ];
+                 $this->assignRole($userRole);
+            }
             return true;
         } catch (QueryException $e) {
             return false;
         }
+    }
+    protected function assignRole(array $data)
+    {
+        return Roleuser::create($data);
     }
 
     public function getStaff()

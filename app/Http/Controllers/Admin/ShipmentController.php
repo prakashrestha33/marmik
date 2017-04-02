@@ -109,4 +109,27 @@ class ShipmentController extends Controller
     {
         //
     }
+
+
+
+
+    public function indexShipType()
+    {
+        $stype=$this->shipmentService->getallShipmenttype();
+        return view('admin.shipment_type.index',compact('stype'));
+    }
+
+    public function createShipType()
+    {
+        return view('admin.shipment_type.create');
+    }
+
+    public function storeShipType(Request $request)
+    {
+        if ($this->shipmentService->add_shipment_type($request)) {
+            return redirect()->route('shipment.type.index')->withSuccess("shipment type added!");
+        }
+        return back()->withErrors("Something went wrong");
+    }
+
 }
