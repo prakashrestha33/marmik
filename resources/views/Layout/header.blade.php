@@ -16,9 +16,8 @@
 {!!Html::style('css/all.css') !!}
 <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-{!! Html::style('css/_all-skins.min.css') !!}
-{!! Html::style('css/custom.css') !!}
-
+    {!! Html::style('css/_all-skins.min.css') !!}
+    {!! Html::style('css/custom.css') !!}
 
 
     <script>
@@ -33,16 +32,14 @@
         <!-- Logo -->
         <a href="/home" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LTE</span>
+            <span class="logo-mini"><b>P</b>T</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-lg"><b>Pos</b>Tracker</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                <span class="sr-only">Toggle navigation</span>
-            </a>
+
 
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
@@ -54,8 +51,9 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-expanded="false">
+                                    {{ Auth::user()->firstName }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -66,7 +64,8 @@
                                             Logout
                                         </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                              style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
@@ -74,7 +73,6 @@
                             </li>
                         @endif
                     </ul>
-
 
 
                     </li>
@@ -90,30 +88,46 @@
         <section class="sidebar">
 
             <li class="active treeview">
-                <ul> <a href="/admin/shipment">
-                  <i class="fa fa-dashboard"></i> <span>Shipment</span>
+                <ul><a href="/admin/shipment">
+                        <i class="fa fa-dashboard"></i> <span>Shipment</span>
 
-                </a> </ul>
+                    </a></ul>
+            </li>
+            <li>
+                <ul><a href="/admin/package">
+                        <i class="fa fa-user"></i> <span>Package</span>
 
-               <ul> <a href="/admin/package">
-                    <i class="fa fa-user"></i> <span>Package</span>
+                    </a>
+                </ul>
 
-                </a>
-               </ul>
+            </li>
+            <li>
+                <ul><a href="/admin/packages/report">
+                        <i class="fa fa-user"></i> <span>Package Report</span>
+
+                    </a>
+                </ul>
+
+            </li>
+            <li>
+                <ul><a href="/admin/customer">
+                        <i class="fa fa-user"></i> <span>Customer</span>
+
+                    </a>
+                </ul>
 
             </li>
 
-            {{--<li class="active">--}}
-                {{--<a href="/admin/category">--}}
-                    {{--<i class="fa fa-dashboard"></i> <span>Category</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
-            {{--<li class="active">--}}
-                {{--<a href="/admin/product">--}}
-                    {{--<i class="fa fa-dashboard"></i> <span>Product</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
 
+            @role('admin')
+            <li class="active">
+                <ul>
+                    <a href="/admin/staff">
+                        <i class="fa fa-users"></i> <span>Staff</span>
+                    </a>
+                </ul>
+            </li>
+            @endrole
 
 
         </section>

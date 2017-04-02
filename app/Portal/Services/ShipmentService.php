@@ -43,4 +43,33 @@ class ShipmentService
         $data= $this->shipmentRepository->singleshippment($id);
         return $data;
     }
+
+    public function update_shipment($request, $id)
+    {
+        $formData=$request->all();
+        return $this->shipmentRepository->updateShipment($formData,$id);
+    }
+
+
+    public function getpackagebytrack($request)
+    {
+
+        $data=$request->all();
+        $tid=$data['tracking_id'];
+        return $this->shipmentRepository->getPackagebyTracking($tid);
+    }
+
+    public function add_shipment_type($request)
+    {
+        $formData=$request->all();
+        return $this->shipmentRepository->storeshippmenttype($formData);
+
+    }
+
+    public function getallShipmenttype()
+    {
+        return $this->shipmentRepository->getAllShipmentType();
+    }
+
+
 }

@@ -19,7 +19,6 @@ class HomeController extends Controller
      */
     public function __construct(PackageService $packageService)
     {
-//        $this->middleware('auth');
         $this->packageService = $packageService;
     }
 
@@ -32,6 +31,6 @@ class HomeController extends Controller
     {
         $package= $this->packageService->getpackage();
 
-        return view('home',compact('package'));
+        return view('welcome',compact('package'));
     }
 }

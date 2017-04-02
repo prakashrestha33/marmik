@@ -2,7 +2,7 @@
 
 @section('main-content')
     <div class=" col-md-8 col-md-offset-2">
-        <h3>Edit Delivery Address</h3>
+        <h3>Edit Package type</h3>
         <div class="box box-info clearfix pad">
 
             {!! Form::model($package,array('route'=>['package.update',$package->id],'method'=>'PUT' ))!!}

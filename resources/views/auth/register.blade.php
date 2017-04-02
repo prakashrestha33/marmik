@@ -65,21 +65,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('membership') ? ' has-error' : '' }} clearfix">
-                            <label for="membership" class="col-sm-4 control-label">Membership</label>
-
-                            <div class="checkbox col-sm-8">
-
-                                <label>
-                                    <input name="membership" type="radio" value="1" checked>
-                                    Active
-                                </label>
-                                <label>
-                                    <input name="membership" type="radio" value="0">
-                                    Inactive
-                                </label>
-                            </div>
-                        </div>
+                        {{ Form::hidden('membership',1) }}
 
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
@@ -106,7 +92,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary green darken-4" style="float: right">
                                     Register
                                 </button>
                             </div>

@@ -25,7 +25,7 @@ class CreateShipmentsTable extends Migration
             $table->string('delivery_city');
             $table->string('delivery_street_name')->nullable();
             $table->string('delivery_home_no');
-            $table->bigInteger('tracking_id');
+            $table->bigInteger('tracking_id')->unique();
             $table->date('departure_date');
             $table->date('delivery_date');
             $table->timestamps();
