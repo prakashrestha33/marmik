@@ -10,6 +10,7 @@ namespace App\Portal\Repositories;
 
 
 use App\Shipment;
+use App\ShipmentType;
 use Illuminate\Database\QueryException;
 
 class ShipmentRepository
@@ -18,15 +19,20 @@ class ShipmentRepository
      * @var Shipment
      */
     private $shipment;
+    /**
+     * @var ShipmentType
+     */
+    private $shipmentType;
 
 
     /**
      * ShipmentRepository constructor.
      * @param Shipment $shipment
      */
-    public function __construct(Shipment $shipment)
+    public function __construct(Shipment $shipment, ShipmentType $shipmentType)
     {
         $this->shipment = $shipment;
+        $this->shipmentType = $shipmentType;
     }
 
     public function addShipment($formData)
@@ -81,6 +87,21 @@ class ShipmentRepository
     {
         $query=$this->shipment->select('*')->where('tracking_id',$tracking_id)->first();
         return $query;
+    }
+
+    public function storeshippmenttype($formData)
+    {
+        try {
+            $this->shipmentType->create($formData);
+            return true;
+        } catch (QueryException $e) {
+            return false;
+        }
+    }
+
+    public function getAllShipmentType()
+    {
+        return $this->shipmentType->select('*')->get();
     }
 
 

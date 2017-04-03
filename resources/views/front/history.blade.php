@@ -20,9 +20,6 @@
 
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons small">menu</i></a>
 
-
-
-
         <div class="container">
             <h4 align="left" style="margin-top: 30px">History</h4>
 

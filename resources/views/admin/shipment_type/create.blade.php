@@ -5,6 +5,7 @@
 
         <!-- Main content -->
 <section class="content">
+    {!! Form::open(array('route'=>'shipment.type.store', 'method'=>'post' ))!!}
 
     <div class="row ">
         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label pad">
@@ -34,8 +35,11 @@
     <div class="clearfix pad">
 
     </div>
+    <div class="clearfix pad"></div>
     <div align="right" >
-        <btn class="btn btn-primary" href="#">Save</btn>
+        {{Form::submit('ADD', array('class'=>'btn btn-bg btn-primary ','title'=>'Save the Shipment type'))}}
+        {!! Form::close() !!}
+
     </div>
 </section>
 <!-- /.content -->

@@ -2,7 +2,7 @@
 
 @section('main-content')
 @role('admin')
-    <section class="content">
+
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
@@ -57,6 +57,5 @@
             <!-- /.col -->
         </div>
         @endrole
-    </section>
 
 @endsection
