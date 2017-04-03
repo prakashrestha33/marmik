@@ -17,7 +17,6 @@
     <link href="{{ asset('css/master/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/icon.css') }}" rel="stylesheet">
     <link href="{{ asset('css/master/materialize.min.css') }}" rel="stylesheet">
-
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -67,29 +66,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col s12 m3" style="text-align: center">
-            <div class="card-panel grey lighten-3">
-                <i class="material-icons" style="font-size: 50px; text-align: center">live_help</i>
-                <span class="black-text"> <h5 style="text-align: center">Lost Packages</h5><br>
-                    <p>Haven't received your package yet?</p>
-                    <p>Report your lost packages on the go with PosTracker</p>
-                </span>
-                <br>
-                <a class="btn btn-primary blue darken-3" href="/package/lost"> Report loss</a>
-            </div>
-        </div>
-        <div class="col s12 m3" style="text-align: center">
-            <div class="card-panel grey lighten-3">
-                <i class="material-icons" style="font-size: 50px; text-align: center">my_location</i>
-                <span class="black-text"> <h5 style="text-align: center">Track Package</h5><br>
-                    <p>Getting your package shipped?</p>
-                    <p>Track the location of your package in real time using PosTracker</p>
-                </span>
-                <br>
-                <a class="btn btn-primary blue darken-3" href="/package/track">Track Your Package</a>
-            </div>
-        </div>
-        <div class="col s12 m3" style="text-align: center">
+        <div class="col s12 m4" style="text-align: center">
             <div class="card-panel grey lighten-3">
                 <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
                 <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
@@ -97,35 +74,51 @@
                     <p>Shipping services available at your doorsteps with PosTracker</p>
                 </span>
                 <br>
-                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request Package Pickup</a>
+                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request Pickup</a>
             </div>
         </div>
-        <div class="col s12 m3">
-            <div class="card-panel grey lighten-3" style="text-align: center">
-                <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
-                <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
-                    <p>Haven't received your package yet?</p>
-                    <p>Report your lost packages on the go with PosTracker.</p>
+        <div class="col s12 m4" style="text-align: center">
+            <div class="card-panel grey lighten-3">
+                <i class="material-icons" style="font-size: 50px; text-align: center">my_location</i>
+                <span class="black-text"> <h5 style="text-align: center">Track Package</h5><br>
+                    <p>Getting your package shipped?</p>
+                    <p>Track the location of your package in real time using PosTracker</p>
                 </span>
                 <br>
-                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request package pickup</a>
+                <a class="btn btn-primary blue darken-3" href="/package/track">Track Package</a>
             </div>
+        </div>
+        <div class="col s12 m4" style="text-align: center">
+            <div class="card-panel grey lighten-3">
+                <i class="material-icons" style="font-size: 50px; text-align: center">live_help</i>
+                <span class="black-text"> <h5 style="text-align: center">Lost Packages</h5><br>
+                    <p>Haven't received your package yet?</p>
+                    <p>Report your lost packages with PosTracker without hassles</p>
+                </span>
+                <br>
+                <a class="btn btn-primary blue darken-3" href="/package/lost"> Report loss</a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 30px; margin-top: 40px">
+        <div class="col s8 m8">
+            <span><h5  style="font-weight:400">Calculate your Total Cost Before Shipping</h5></span>
+            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits you</p>
+            <a class="btn btn-primary blue darken-3" href="/package/pickup">Try It Yourself</a>
+        </div>
+        <div class="col s4 m4" style="text-align: center">
+            <img src="{{ asset('image/calculator.png') }}" width="130px" height="130px">
         </div>
     </div>
     <div class="row">
-
-        <div class="col s12 m3">
-            <div class="card-panel grey lighten-3" style="text-align: center">
-                <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
-                <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
-                    <p>Haven't received your package yet?</p>
-                    <p>Report your lost packages on the go with PosTracker.</p>
-                </span>
-                <br>
-                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request package pickup</a>
-            </div>
+        <div class="col s4 m4">
+            <img src="">
+        </div>
+        <div class="col s8 m8">
+            <span><h5  style="font-weight:400">Ship To Any Part of the World</h5></span>
+            <p>Your worldwide shipping needs is just a click away with <b>PosTracker</b>. Be a part of this global family.</p>
+            <a class="btn btn-primary blue darken-3" href="{{ route('register') }}">Register Today!</a>
         </div>
     </div>
-
 </div>
 

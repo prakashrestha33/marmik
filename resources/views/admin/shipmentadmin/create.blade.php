@@ -16,7 +16,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" id="customer_name" class="form-control" placeholder="Customer Name" name="customer_name">
+                                <input type="text" id="customer_name" class="form-control" placeholder="Customer Name" required name="customer_name">
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" id="receiver_name" class="form-control" placeholder="Receiver Name" name="receiver_name">
+                                <input type="text" id="receiver_name" class="form-control" placeholder="Receiver Name" required name="receiver_name">
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="number" id="receiver_contact" class="form-control" name="receiver_mobile_no">
+                                <input type="number" id="receiver_contact" class="form-control" required name="receiver_mobile_no">
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                         <label for="shipment_type">Shipment Type</label>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                        <select class="form-control " id="shipment_type" name="shipment_type">
+                        <select class="form-control " id="shipment_type" required name="shipment_type">
                             <option value="">-- Please select --</option>
                             <option value="Roadways">Roadways</option>
                             <option value="Airways">Airways</option>
@@ -63,7 +63,7 @@
                         <label for="package_type">Package Type</label>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                        <select class="form-control show-tick" id="package_type" name="package_id" >
+                        <select class="form-control show-tick" id="package_type" required name="package_id" >
                             <option value="">-- Please select --</option>
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
@@ -97,7 +97,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" id="city_name" class="form-control" placeholder="City" name="delivery_city">
+                                <input type="text" id="city_name" class="form-control" placeholder="City" required name="delivery_city">
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" id="state_name" class="form-control" placeholder="State" name="delivery_state">
+                                <input type="text" id="state_name" class="form-control" placeholder="State" required name="delivery_state">
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" id="home_number" class="form-control" placeholder="Home Number" name="delivery_home_no">
+                                <input type="text" id="home_number" class="form-control" placeholder="Home Number" required name="delivery_home_no">
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
                         <div class="form-line">
-                            <input type="date" id="departure_date" class="form-control" placeholder="" name="departure_date">
+                            <input type="date" id="departure_date" class="form-control" placeholder="" required name="departure_date">
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
                         <div class="form-line">
-                            <input type="date" id="delivery_date" class="form-control" placeholder="" name="delivery_date">
+                            <input type="date" id="delivery_date" class="form-control" placeholder="" required name="delivery_date">
                         </div>
                     </div>
                 </div>
