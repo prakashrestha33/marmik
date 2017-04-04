@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Portal\Services\PackageService;
 use App\Portal\Services\ShipmentService;
 use Illuminate\Http\Request;
 
@@ -12,15 +13,20 @@ class ShipmentController extends Controller
      * @var ShipmentService
      */
     private $shipmentService;
+    /**
+     * @var PackageService
+     */
+    private $packageService;
 
     /**
      * ShipmentController constructor.
      * @param ShipmentService $shipmentService
      */
-    public function __construct(ShipmentService $shipmentService)
+    public function __construct(ShipmentService $shipmentService, PackageService $packageService)
     {
         $this->middleware('auth:admin');
         $this->shipmentService = $shipmentService;
+        $this->packageService = $packageService;
     }
 
     /**
@@ -31,6 +37,7 @@ class ShipmentController extends Controller
     public function index()
     {
         $viewall= $this->shipmentService->viewall();
+
         return view('admin/shipmentadmin/index', compact('viewall'));
     }
 
@@ -41,7 +48,9 @@ class ShipmentController extends Controller
      */
     public function create()
     {
-        return view('admin/shipmentadmin/create');
+        $package=$this->packageService->getpackage();
+        $ship_type= $this->shipmentService->getallShipmenttype();
+        return view('admin/shipmentadmin/create',compact('package','ship_type'));
 
     }
 
