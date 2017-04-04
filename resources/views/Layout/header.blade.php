@@ -107,6 +107,14 @@
 
             </li>
             <li>
+                <ul><a href="/admin/batch">
+                        <i class="fa fa-user"></i> <span>Batch</span>
+
+                    </a>
+                </ul>
+
+            </li>
+            <li>
                 <ul><a href="/admin/packages/report">
                         <i class="fa fa-user"></i> <span>Package Report</span>
 

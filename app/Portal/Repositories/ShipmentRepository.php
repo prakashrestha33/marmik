@@ -39,7 +39,8 @@ class ShipmentRepository
     {
 
         try {
-            $this->shipment->insert($formData);
+//            dd($formData);
+            $this->shipment->create($formData);
             return true;
         } catch (QueryException $e) {
             return false;
