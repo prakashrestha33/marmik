@@ -6,7 +6,11 @@
         <!-- Content Header (Page header) -->
 
         <!-- Main content -->
-        <section class="content">
+
+        <section class="content  col-md-10 ">
+            <h3 align=" center">Create Shipment</h3>
+
+            <div class="col-md-offset-2">
             {!! Form::open(array('route'=>'shipment.store', 'method'=>'post' ))!!}
             {{ Form::hidden('tracking_id', rand(1,1000000)) }}
                 <div class="row">
@@ -169,6 +173,7 @@
                 {{Form::submit('ADD', array('class'=>'btn btn-bg btn-primary ','title'=>'Save the Shipment'))}}
                 {!! Form::close() !!}
 
+            </div>
             </div>
         </section>
         <!-- /.content -->

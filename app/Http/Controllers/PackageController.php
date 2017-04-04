@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Portal\Services\PackageService;
 use App\Portal\Services\ShipmentService;
+use App\Portal\Services\TrackingService;
 use Illuminate\Http\Request;
 
 class PackageController extends Controller
@@ -18,12 +19,17 @@ class PackageController extends Controller
      * @var ShipmentService
      */
     private $shipmentService;
+    /**
+     * @var TrackingService
+     */
+    private $trackingService;
 
-    public function __construct(PackageService $packageService,ShipmentService $shipmentService)
+    public function __construct(PackageService $packageService,ShipmentService $shipmentService,TrackingService $trackingService)
     {
 
         $this->packageService = $packageService;
         $this->shipmentService = $shipmentService;
+        $this->trackingService = $trackingService;
     }
 
     public function create()
@@ -49,7 +55,9 @@ class PackageController extends Controller
     {
         if ($result=$this->shipmentService->getpackagebytrack($request))
         {
-            return view('front.tracked',compact('result'))->withSuccess("package tracked!");
+            $location= $this->trackingService->getlocation($result->tracking_id);
+
+            return view('front.tracked',compact('result','location'))->withSuccess("package tracked!");
         }
         return back()->withErrors("Check Tracking Id once more");
     }

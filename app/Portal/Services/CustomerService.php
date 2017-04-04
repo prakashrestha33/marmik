@@ -28,4 +28,16 @@ class CustomerService
     {
         return $this->customerRepository->getCustomer();
     }
+
+    public function getCustomerId($id)
+    {
+        return $this->customerRepository->getCustomerId($id);
+    }
+
+
+    public function changePassword( $request,$id)
+    {
+        $data = $this->customerRepository->ChangePassword($request,$id);
+        return $data;
+    }
 }

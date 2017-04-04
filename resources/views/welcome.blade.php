@@ -1,6 +1,3 @@
-{{--@extends('layouts.app')--}}
-
-
         <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -25,22 +22,22 @@
     </script>
 </head>
 <body>
-    <style>
-        body {
-            background-color: #f5f5f5;
-        }
+<style>
+    body {
+        background-color: #f5f5f5;
+    }
 
-        .theBack {
-            font-size: 50px;
-            font-weight: 200;
-        }
-    </style>
+    .theBack {
+        font-size: 50px;
+        font-weight: 200;
+    }
+
+</style>
 
 
 <div>
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+
 
     <div class="background" style="background-color: #1565c0; height: 250px;">
         <div class="center-align">
@@ -49,20 +46,46 @@
         <div class="center-align" style="margin-top: 20px">
             <div>
                 <h5 style="font-size: 19px; font-weight: 300">
-                    <a  href="{{ route('login') }}" class="white-text text-darken-1" style="font-family: "><i
-                                class="material-icons center-align">person_pin</i> Sign In</a>&nbsp &nbsp &nbsp &nbsp
-                    <a href="{{ route('register') }}" class="white-text text-darken-1"><i
-                                class="material-icons center-align">assignment_ind</i> Register</a>
+                    @if (Auth::guest())
+                        <a href="{{ route('login') }}" class="white-text text-darken-1" style="font-family: "><i
+                                    class="material-icons center-align">person_pin</i> Sign In</a>&nbsp &nbsp &nbsp
+                        &nbsp
+                        <a href="{{ route('register') }}" class="white-text text-darken-1"><i
+                                    class="material-icons center-align">assignment_ind</i> Register</a>
+                    @else
+
+                        <button class="btn- btn-large red"> {{ Auth::user()->name }}</button><br>
+
+
+                            <a href="{{ route('logout') }}" class="btn green" style="float: right"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+
+
+                        {!! Html::linkRoute('password','Change Password',array( Auth::user()->id),array('class'=>'btn btn-success',
+                        'style'=>'float: right'))!!}
+                    @endif
+
+
                 </h5>
             </div>
         </div>
     </div>
+
     <div class="container" style="text-align: center; margin-top: 30px; margin-bottom: 30px">
         <h1 style="font-weight: 200">
             <b style="font-weight: 400">PosTracker</b>
             <span class="theBack"> Is Here to Fulfill All of Your <br> Postal and Cargo Tracking Needs</span>
         </h1>
+
     </div>
+
 </div>
 <div class="container">
     <div class="row">
@@ -102,8 +125,9 @@
     </div>
     <div class="row" style="margin-bottom: 30px; margin-top: 40px">
         <div class="col s8 m8">
-            <span><h5  style="font-weight:400">Calculate your Total Cost Before Shipping</h5></span>
-            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits you</p>
+            <span><h5 style="font-weight:400">Calculate your Total Cost Before Shipping</h5></span>
+            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits
+                you</p>
         </div>
         <div class="col s4 m4" style="text-align: center">
             <img src="{{ asset('image/calculator.png') }}" width="140px" height="140px">
@@ -114,41 +138,50 @@
             <img src="{{ asset('image/delivery.png') }}" width="140px" height="140px">
         </div>
         <div class="col s8 m8">
-            <span><h5  style="font-weight:400">Ship To Any Part of the World</h5></span>
-            <p>Your worldwide shipping needs is just a click away with <b>PosTracker</b>. Be a part of this global family.</p>
+            <span><h5 style="font-weight:400">Ship To Any Part of the World</h5></span>
+            <p>Your worldwide shipping needs is just a click away with <b>PosTracker</b>. Be a part of this global
+                family.</p>
         </div>
     </div>
     <div class="row" style="margin-bottom: 30px; margin-top: 40px">
         <div class="col s8 m8">
-            <span><h5  style="font-weight:400">Track Your Package in Real Time</h5></span>
-            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits you</p>
+            <span><h5 style="font-weight:400">Track Your Package in Real Time</h5></span>
+            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits
+                you</p>
         </div>
         <div class="col s4 m4" style="text-align: center">
             <img src="{{ asset('image/location_pin.png') }}" width="140px" height="140px">
         </div>
     </div>
 </div>
-    <footer class="page-footer blue darken-3">
+
+
+<footer class="page-footer blue darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h4 class="white-text"><b>PosT</b>racker</h4>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                    content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Request Pickup</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Track Package</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h4 class="white-text"><b>PosT</b>racker</h4>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Request Pickup</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Track Package</a></li>
-                    </ul>
-                </div>
-            </div>
+            © 2017 PosTracker Inc.
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2017 PosTracker Inc.
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/js/master/materialize.min.js"></script>
 
