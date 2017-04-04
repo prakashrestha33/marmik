@@ -111,8 +111,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col s4 m4">
-            <img src="">
+        <div class="col s4 m4" style="text-align: center">
+            <img src="{{ asset('image/delivery.png') }}" width="130px" height="130px">
         </div>
         <div class="col s8 m8">
             <span><h5  style="font-weight:400">Ship To Any Part of the World</h5></span>
