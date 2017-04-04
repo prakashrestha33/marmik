@@ -59,5 +59,17 @@ class ShipmentService
         return $this->shipmentRepository->getPackagebyTracking($tid);
     }
 
+    public function add_shipment_type($request)
+    {
+        $formData=$request->all();
+        return $this->shipmentRepository->storeshippmenttype($formData);
+
+    }
+
+    public function getallShipmenttype()
+    {
+        return $this->shipmentRepository->getAllShipmentType();
+    }
+
 
 }

@@ -51,10 +51,10 @@
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <select class="form-control " id="shipment_type" name="shipment_type">
-                            <option value="">-- Please select --</option>
-                            <option value="Roadways">Roadways</option>
-                            <option value="Airways">Airways</option>
-                            <option value="Waterways">Waterways</option>
+                                <option value="">-- Please select --</option>
+                            @foreach($ship_type as $p)
+                                <option value="{{$p->id}}">{{$p->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -64,10 +64,10 @@
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <select class="form-control show-tick" id="package_type" name="package_id" >
-                            <option value="">-- Please select --</option>
-                            <option value="Small">Small</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Large">Large</option>
+                           <option value="">-- Please select --</option>
+                            @foreach($package as $p)
+                                <option value="{{$p->id}}">{{$p->type}}</option>
+                           @endforeach
                         </select>
                     </div>
                 </div>
@@ -79,10 +79,10 @@
                 <?php $x = Config::get('country');?>
 
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <select name="country" class="form-control" required>
+                    <select name="delivery_country" class="form-control" required>
                         <option selected="selected" disabled>Choose Country</option>
                         @foreach($x as $code=>$name)
-                            <option value="{{$name}}">
+                            <option value="{{$code}}">
                                 {{$name}}
                             </option>
                         @endforeach

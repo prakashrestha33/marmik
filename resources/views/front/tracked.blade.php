@@ -3,19 +3,6 @@
 @section('content')
 
 
-
-
-    {{--"delivery_state" => "sersdf"--}}
-    {{--"delivery_city" => "wrdesf"--}}
-    {{--"delivery_street_name" => "werwer"--}}
-    {{--"delivery_home_no" => "324"--}}
-    {{--"tracking_id" => 553315065336--}}
-    {{--"departure_date" => "2017-03-14"--}}
-    {{--"delivery_date" => "2017-03-24"--}}
-    {{--"created_at" => null--}}
-    {{--"updated_at" => "2017-03-25 14:37:58"--}}
-
-
         <div class="container" style="font-size: 17px">
             <h3 align="left" style="margin-top: 30px">Shipment </h3>
             <div class="row">
