@@ -16,8 +16,8 @@ class CreateTrackingPostsTable extends Migration
         Schema::create('tracking_posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('address_name');
-            $table->float('latitude');
-            $table->float('longitude');
+            $table->double('latitude');
+            $table->double('longitude');
             $table->integer('batch_id')->unsigned();
 
             $table->timestamps();
