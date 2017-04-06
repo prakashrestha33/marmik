@@ -27,7 +27,6 @@ class ShipmentService
     public function add_shipment($request)
     {
         $formData = $request->all();
-        $formData = array_except($formData, ['_token', 'to', 'remove']);
         $data= $this->shipmentRepository->addShipment($formData);
         return $data;
     }

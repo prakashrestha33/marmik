@@ -47,7 +47,12 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li>
+                                <a href="{{ route('login') }}">
+                                    <i class="material-icons center-align">person_pin</i>
+                                        Login
+                                </a>
+                            </li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
@@ -96,6 +101,14 @@
             <li>
                 <ul><a href="/admin/package">
                         <i class="fa fa-user"></i> <span>Package</span>
+
+                    </a>
+                </ul>
+
+            </li>
+            <li>
+                <ul><a href="/admin/batch">
+                        <i class="fa fa-user"></i> <span>Batch</span>
 
                     </a>
                 </ul>

@@ -3,6 +3,7 @@
 Route::resource('/shipment', 'ShipmentController');
 Route::resource('/customer', 'CustomerAdminController');
 Route::resource('/package', 'PackageAdminController');
+Route::resource('/batch', 'BatchController');
 
 
 Route::get('/staff', 'AdminController@indexStaff')->name('staff.index');

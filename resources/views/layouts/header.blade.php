@@ -26,6 +26,7 @@
 <div id="app">
     <nav class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">
+            <div class="container">
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -40,6 +41,7 @@
                     <img src="{{asset('image/logo.png')}}" height="45px">
                 </a>
             </div>
+            </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
@@ -48,7 +50,9 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+                {{--<div class="content-wrapper ">--}}
+                <ul class="nav navbar-nav navbar-right ">
+
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ route('login') }}">Login</a></li>
@@ -75,6 +79,6 @@
                         </li>
                     @endif
                 </ul>
-            </div>
+            {{--</div>--}}
     </nav>
 </div>

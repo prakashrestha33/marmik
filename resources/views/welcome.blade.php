@@ -17,7 +17,6 @@
     <link href="{{ asset('css/master/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/icon.css') }}" rel="stylesheet">
     <link href="{{ asset('css/master/materialize.min.css') }}" rel="stylesheet">
-
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -69,13 +68,13 @@
     <div class="row">
         <div class="col s12 m3" style="text-align: center">
             <div class="card-panel grey lighten-3">
-                <i class="material-icons" style="font-size: 50px; text-align: center">live_help</i>
-                <span class="black-text"> <h5 style="text-align: center">Lost Packages</h5><br>
-                    <p>Haven't received your package yet?</p>
-                    <p>Report your lost packages on the go with PosTracker</p>
+                <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
+                <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
+                    <p>Shipping right from your doorsteps</p>
+                    <p>Shipping services available at your doorsteps with PosTracker</p>
                 </span>
                 <br>
-                <a class="btn btn-primary blue darken-3" href="/package/lost"> Report loss</a>
+                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request Pickup</a>
             </div>
         </div>
         <div class="col s12 m3" style="text-align: center">
@@ -86,46 +85,71 @@
                     <p>Track the location of your package in real time using PosTracker</p>
                 </span>
                 <br>
-                <a class="btn btn-primary blue darken-3" href="/package/track">Track Your Package</a>
+                <a class="btn btn-primary blue darken-3" href="/package/track">Track Package</a>
             </div>
         </div>
         <div class="col s12 m3" style="text-align: center">
             <div class="card-panel grey lighten-3">
-                <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
-                <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
-                    <p>Shipping right from your doorsteps</p>
-                    <p>Shipping services available at your doorsteps with PosTracker</p>
+                <i class="material-icons" style="font-size: 50px; text-align: center">live_help</i>
+                <span class="black-text"> <h5 style="text-align: center">Lost Packages</h5><br>
+                    <p>Haven't received your package yet?</p>
+                    <p>Report your lost packages with PosTracker without hassles</p>
                 </span>
                 <br>
-                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request Package Pickup</a>
+                <a class="btn btn-primary blue darken-3" href="/package/lost"> Report loss</a>
             </div>
         </div>
-        <div class="col s12 m3">
-            <div class="card-panel grey lighten-3" style="text-align: center">
-                <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
-                <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
-                    <p>Haven't received your package yet?</p>
-                    <p>Report your lost packages on the go with PosTracker.</p>
-                </span>
-                <br>
-                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request package pickup</a>
-            </div>
+
+    </div>
+    <div class="row" style="margin-bottom: 30px; margin-top: 40px">
+        <div class="col s8 m8">
+            <span><h5  style="font-weight:400">Calculate your Total Cost Before Shipping</h5></span>
+            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits you</p>
+        </div>
+        <div class="col s4 m4" style="text-align: center">
+            <img src="{{ asset('image/calculator.png') }}" width="140px" height="140px">
         </div>
     </div>
     <div class="row">
-
-        <div class="col s12 m3">
-            <div class="card-panel grey lighten-3" style="text-align: center">
-                <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
-                <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
-                    <p>Haven't received your package yet?</p>
-                    <p>Report your lost packages on the go with PosTracker.</p>
-                </span>
-                <br>
-                <a class="btn btn-primary blue darken-3" href="/package/pickup">Request package pickup</a>
-            </div>
+        <div class="col s4 m4" style="text-align: center">
+            <img src="{{ asset('image/delivery.png') }}" width="140px" height="140px">
+        </div>
+        <div class="col s8 m8">
+            <span><h5  style="font-weight:400">Ship To Any Part of the World</h5></span>
+            <p>Your worldwide shipping needs is just a click away with <b>PosTracker</b>. Be a part of this global family.</p>
         </div>
     </div>
-
+    <div class="row" style="margin-bottom: 30px; margin-top: 40px">
+        <div class="col s8 m8">
+            <span><h5  style="font-weight:400">Track Your Package in Real Time</h5></span>
+            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits you</p>
+        </div>
+        <div class="col s4 m4" style="text-align: center">
+            <img src="{{ asset('image/location_pin.png') }}" width="140px" height="140px">
+            </div>
+    </div>
 </div>
+    <footer class="page-footer blue darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text"><b>PosT</b>racker</h4>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Request Pickup</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Track Package</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 PosTracker Inc.
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 
