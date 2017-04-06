@@ -12,7 +12,8 @@ class batch extends Model
 
 
     protected $fillable = [
-    'tracking_id',
+    'tracking_id','batch_id'
 
     ];
+
 }

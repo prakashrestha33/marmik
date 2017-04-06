@@ -15,6 +15,7 @@ class CreateBatchesTable extends Migration
     {
         Schema::create('batches', function (Blueprint $table) {
             $table->increments('id');
+            $table->bigInteger('batch_id');
             $table->bigInteger('tracking_id')->unique();
             $table->foreign('tracking_id')->references('tracking_id')->on('shipments')
                 ->onUpdate('cascade')->onDelete('cascade');

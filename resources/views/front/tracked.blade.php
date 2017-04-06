@@ -67,7 +67,7 @@
             </div>
 
     </div>
-{!!  ($location->latitude.",".$location->longitude) !!}
+{{--{!!  ($location->latitude.",".$location->longitude) !!}--}}
 
     <style>
         #map {
