@@ -1,8 +1,5 @@
 @extends('Layout.app')
 
-<<<<<<< HEAD
-@section('main-content')
-=======
 
 @section('main-content')
     <style>
@@ -20,7 +17,6 @@
             background: transparent !important;
         }
     </style>
->>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
 
     <section class="content">
         <div class="row">
@@ -42,10 +38,7 @@
                             <tr>
                                 <th>Batch ID</th>
                                 <th>tracking Id</th>
-<<<<<<< HEAD
-=======
                                 <th>location</th>
->>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
 
                             </tr>
                             </thead>
@@ -54,11 +47,8 @@
                                 <tr>
                                     <td>{{$list->id}}</td>
                                     <td> {{$list->tracking_id}}</td>
-<<<<<<< HEAD
-=======
                                     <td> <button  > view location</button></td>
 
->>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
 
                                 </tr>
                             @endforeach
@@ -67,19 +57,12 @@
                         </table>
                     </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
             </div>
             <!-- /.col -->
         </div>
-<<<<<<< HEAD
-=======
-
         <div class="example-modal">
             <div class="modal modal-primary">
                 <div class="modal-dialog">
@@ -103,7 +86,6 @@
             </div>
             <!-- /.modal -->
         </div>
->>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
         <!-- /.row -->
     </section>
 

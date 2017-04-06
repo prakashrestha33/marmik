@@ -125,21 +125,13 @@
                 <a class="btn btn-primary blue darken-3" href="/package/lost"> Report loss</a>
             </div>
         </div>
-<<<<<<< HEAD
 
-    </div>
-    <div class="row" style="margin-bottom: 30px; margin-top: 40px">
-        <div class="col s8 m8">
-            <span><h5  style="font-weight:400">Calculate your Total Cost Before Shipping</h5></span>
-            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits you</p>
-=======
     </div>
     <div class="row" style="margin-bottom: 30px; margin-top: 40px">
         <div class="col s8 m8">
             <span><h5 style="font-weight:400">Calculate your Total Cost Before Shipping</h5></span>
             <p>Know the total cost of your shipment without even placing the order. Find out the route that suits
                 you</p>
->>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
         </div>
         <div class="col s4 m4" style="text-align: center">
             <img src="{{ asset('image/calculator.png') }}" width="140px" height="140px">
@@ -150,7 +142,6 @@
             <img src="{{ asset('image/delivery.png') }}" width="140px" height="140px">
         </div>
         <div class="col s8 m8">
-<<<<<<< HEAD
             <span><h5  style="font-weight:400">Ship To Any Part of the World</h5></span>
             <p>Your worldwide shipping needs is just a click away with <b>PosTracker</b>. Be a part of this global family.</p>
         </div>
@@ -188,52 +179,7 @@
             </div>
         </div>
     </footer>
-=======
-            <span><h5 style="font-weight:400">Ship To Any Part of the World</h5></span>
-            <p>Your worldwide shipping needs is just a click away with <b>PosTracker</b>. Be a part of this global
-                family.</p>
-        </div>
-    </div>
-    <div class="row" style="margin-bottom: 30px; margin-top: 40px">
-        <div class="col s8 m8">
-            <span><h5 style="font-weight:400">Track Your Package in Real Time</h5></span>
-            <p>Know the total cost of your shipment without even placing the order. Find out the route that suits
-                you</p>
-        </div>
-        <div class="col s4 m4" style="text-align: center">
-            <img src="{{ asset('image/location_pin.png') }}" width="140px" height="140px">
-        </div>
-    </div>
-</div>
-
-
-<footer class="page-footer blue darken-3">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h4 class="white-text"><b>PosT</b>racker</h4>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                    content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Request Pickup</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Track Package</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2017 PosTracker Inc.
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
-    </div>
-</footer>
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/js/master/materialize.min.js"></script>
->>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
-
