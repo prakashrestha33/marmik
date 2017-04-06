@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="col s12 m6">
-                    <b>Tracking ID:</b> {{$result->tracking_id}}
+{{--                    <b>Tracking ID:</b> {{$result->tracking_id}}--}}
                 </div>
             </div>
             <div class="row">
@@ -67,9 +67,69 @@
             </div>
 
     </div>
-{!!  $location= ($location->latitude.",".$location->longitude) !!}
+{!!  ($location->latitude.",".$location->longitude) !!}
 
-    <div class="col s12 m5" style="font-size: 17px">
+    <style>
+        #map {
+            height: 100%;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <div id="map"></div>
+    <script>
+
+        function initMap() {
+            var myLatLng = {lat: 27.25 , lng: 85.22};
+            {{--var myLatLng = {lat: {{$location->latitude}} , lng: {{$location->longitude }}};--}}
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2xuVlrqaQEmX_QyZNIiAJMBWV3PGBKow&callback=initMap">
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{--<div class="col s12 m5" style="font-size: 17px">
         <div id="map_canvas" style=" height:400px;"></div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -114,7 +174,7 @@
                 })();
             });
         </script>
-    </div>
+    </div>--}}
 
 
 </div>

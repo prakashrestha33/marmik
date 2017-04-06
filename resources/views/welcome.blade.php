@@ -68,7 +68,10 @@
                             </form>
 
 
+
                         {!! Html::linkRoute('password','Change Password',array( Auth::user()->id),array('class'=>'btn btn-success',
+                        'style'=>'float: right'))!!}
+                        {!! Html::linkRoute('profile.history','History',array( Auth::user()->id),array('class'=>'btn btn-success',
                         'style'=>'float: right'))!!}
                     @endif
 

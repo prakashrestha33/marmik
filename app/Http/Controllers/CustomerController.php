@@ -43,10 +43,12 @@ class CustomerController extends Controller
     public function pickup()
     {
         $package= $this->packageService->getpackage();
-        return view('front.pickup',compact('package'));
+        $ship_type= $this->shipmentService->getallShipmenttype();
+        return view('front.pickup',compact('package','ship_type'));
     }
     public function pickupstore(Request $request)
     {
+//        dd($request->all());
         if ($pickup=$this->pickupService->addpickuprequest($request)) {
             $id=$pickup->id;
             return redirect()->route('package.checkout',$id)->withSuccess("package pickup request made!");
@@ -58,8 +60,9 @@ class CustomerController extends Controller
     {
         $pickup=$this->pickupService->getpickupdetail($id);
         $package=$this->packageService->getpackageid($pickup->package_id);
+        $ship_type= $this->shipmentService->getShipmenttypeid($pickup->shipment_type);
 
-        return view('front.checkout',compact('pickup','package'));
+        return view('front.checkout',compact('pickup','package','ship_type'));
     }
 
     public function history($id)

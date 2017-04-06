@@ -41,7 +41,7 @@ class PackageController extends Controller
     public function report(Request $request)
     {
         if ($this->packageService->addPackagereport($request)) {
-            return redirect()->route('/home')->withSuccess("package lost report added!");
+            return redirect('/home')->withSuccess("package lost report added!");
         }
         return back()->withErrors("Check Your Tracking Id once more");
     }

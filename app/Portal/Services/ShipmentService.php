@@ -70,5 +70,10 @@ class ShipmentService
         return $this->shipmentRepository->getAllShipmentType();
     }
 
+    public function getShipmenttypeid($shipment_type)
+    {
+        return $this->shipmentRepository->getshipmenttypeid($shipment_type);
+    }
+
 
 }

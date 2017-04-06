@@ -16,6 +16,7 @@ class BatchController extends Controller
 
     public function __construct(BatchService $batchService)
      {
+         $this->middleware('auth:admin');
          $this->batchService = $batchService;
      }
 

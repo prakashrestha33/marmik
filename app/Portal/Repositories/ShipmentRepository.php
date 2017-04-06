@@ -106,5 +106,11 @@ class ShipmentRepository
         return $this->shipmentType->select('*')->get();
     }
 
+    public function getshipmenttypeid($shipment_type)
+    {
+       return $this->shipmentType->select('*')->where('id',$shipment_type)->first();
+
+    }
+
 
 }

@@ -54,9 +54,9 @@
                 <div class="input-field col m6 s12">
                     <select name="shipment_type">
                         <option value="" disabled selected>Select Shipment Type</option>
-                        <option value="Airways" >Airways</option>
-                        <option value="Roadways">Roadways</option>
-                        <option value="Waterways">Waterways</option>
+                        @foreach($ship_type as $p)
+                            <option value="{{$p->id}}">{{$p->name}}</option>
+                        @endforeach
                     </select>
                     <label>Shipment Type</label>
                 </div>

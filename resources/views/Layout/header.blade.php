@@ -51,7 +51,6 @@
                                         Login
                                 </a>
                             </li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -99,6 +98,14 @@
             <li>
                 <ul><a href="/admin/package">
                         <i class="fa fa-user"></i> <span>Package</span>
+
+                    </a>
+                </ul>
+
+            </li>
+            <li>
+                <ul><a href="/admin/shipment_type">
+                        <i class="fa fa-user"></i> <span>Shipment type</span>
 
                     </a>
                 </ul>

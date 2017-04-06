@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminLoginController extends Controller
 {
+
+    protected $redirectTo = '/admin';
+
     public function __construct()
     {
         $this->middleware('guest:admin');
@@ -31,4 +34,6 @@ class AdminLoginController extends Controller
 
         return redirect()->back()->withInput($request->only('email', 'remember'));
     }
+
+
 }

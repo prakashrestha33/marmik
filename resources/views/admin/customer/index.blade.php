@@ -21,7 +21,7 @@
                                 <th>email</th>
                                 <th>Contact</th>
                                 <th>Address</th>
-                                <th>Member</th>
+
 
                             </tr>
                             </thead>
@@ -34,7 +34,6 @@
                                 <td>{{$list->email}}</td>
                                 <td>{{$list->contact}}</td>
                                 <td>{{$list->address}}</td>
-                                <td>{{$list->member}}</td>
 
                             </tr>
                             @endforeach
