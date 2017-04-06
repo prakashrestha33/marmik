@@ -56,29 +56,40 @@
 
                         <button class="btn- btn-large red"> {{ Auth::user()->name }}</button><br>
 
-
-                            <a href="{{ route('logout') }}" class="btn green" style="float: right"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                Logout
+                        <div class="fixed-action-btn vertical click-to-toggle">
+                            <a class="btn-floating btn-large blue darken-2" data-tooltip="Bla">
+                                <i class="material-icons">person_pin</i>
                             </a>
+                            <ul>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
+                                <li>
+                                    <a  href="/profile/{{Auth::user()->id}}/history" class="btn-floating tooltipped green darken-3" data-position="left" data-delay="20" data-tooltip="History" >
+                                        <i class="material-icons">restore</i></a>
+                                </li>
+                                <li>
+                                    <a  href="/profile/{{Auth::user()->id}}/password" type="button" class="btn-floating tooltipped yellow accent-3" data-position="left" data-delay="20" data-tooltip="Change Password">
+                                        <i class="material-icons">mode_edit</i></a>
+                                </li>
+                                <li>
 
 
 
-                        {!! Html::linkRoute('password','Change Password',array( Auth::user()->id),array('class'=>'btn btn-success',
-                        'style'=>'float: right'))!!}
-                        {!! Html::linkRoute('profile.history','History',array( Auth::user()->id),array('class'=>'btn btn-success',
-                        'style'=>'float: right'))!!}
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();"
+                                       type="button" class="btn-floating tooltipped red darken-3" data-position="left" data-delay="20" data-tooltip="Logout">
+                                        <i class="material-icons">lock_open</i></a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     @endif
-
-
                 </h5>
             </div>
         </div>
+
     </div>
 
     <div class="container" style="text-align: center; margin-top: 30px; margin-bottom: 30px">
@@ -92,7 +103,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col s12 m3" style="text-align: center">
+        <div class="col s12 m4" style="text-align: center">
             <div class="card-panel grey lighten-3">
                 <i class="material-icons" style="font-size: 50px; text-align: center">shopping_cart</i>
                 <span class="black-text"> <h5 style="text-align: center">Request Pickup</h5><br>
@@ -103,7 +114,7 @@
                 <a class="btn btn-primary blue darken-3" href="/package/pickup">Request Pickup</a>
             </div>
         </div>
-        <div class="col s12 m3" style="text-align: center">
+        <div class="col s12 m4" style="text-align: center">
             <div class="card-panel grey lighten-3">
                 <i class="material-icons" style="font-size: 50px; text-align: center">my_location</i>
                 <span class="black-text"> <h5 style="text-align: center">Track Package</h5><br>
@@ -114,7 +125,7 @@
                 <a class="btn btn-primary blue darken-3" href="/package/track">Track Package</a>
             </div>
         </div>
-        <div class="col s12 m3" style="text-align: center">
+        <div class="col s12 m4" style="text-align: center">
             <div class="card-panel grey lighten-3">
                 <i class="material-icons" style="font-size: 50px; text-align: center">live_help</i>
                 <span class="black-text"> <h5 style="text-align: center">Lost Packages</h5><br>
@@ -125,7 +136,90 @@
                 <a class="btn btn-primary blue darken-3" href="/package/lost"> Report loss</a>
             </div>
         </div>
+    </div>
 
+    <div class="row">
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="card collapsible-header"><i class="material-icons">filter_drama</i><b>Package Types</b><br>
+                        Various wide range of packages to choose from
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            <table class="highlight">
+                                <thead>
+                                <tr>
+                                    <th>Package Type</th>
+                                    <th>Weight</th>
+                                    <th>Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Letters</td>
+                                    <td>~1 KG</td>
+                                    <td>$2.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Small</td>
+                                    <td>1-5 KG</td>
+                                    <td>$7.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Medium</td>
+                                    <td>5-10 KG</td>
+                                    <td>$12.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Large</td>
+                                    <td>10-25 KG</td>
+                                    <td>$20</td>
+                                </tr>
+                                <tr>
+                                    <td>Extra Large</td>
+                                    <td>>25 KG</td>
+                                    <td>$40</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li>
+                <div class="card collapsible-header grey lighten-3"><i class="material-icons">filter_drama</i><b>Shipment Paths</b><br>
+                    Ship using the pathway which is the most convinient for you!
+                </div>
+                <div class="collapsible-body">
+                        <span>
+                            <table class="highlight">
+                                <thead>
+                                <tr>
+                                    <th>Shipment Method</th>
+                                    <th>Price/KM</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Roadways</td>
+                                    <td>$3/KM</td>
+                                </tr>
+                                <tr>
+                                    <td>Waterways</td>
+                                    <td>$6/KM</td>
+                                </tr>
+                                <tr>
+                                    <td>Airways</td>
+                                    <td>$10/KM</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </span>
+                </div>
+            </li>
+        </ul>
     </div>
     <div class="row" style="margin-bottom: 30px; margin-top: 40px">
         <div class="col s8 m8">
@@ -166,8 +260,18 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Request Pickup</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Track Package</a></li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="/package/pickup">
+                                <i class="material-icons" style="font-size: 20px">shopping_cart</i>
+                                Request Pickup
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="/package/track">
+                                <i class="material-icons" style="font-size: 20px">my_location</i>
+                                Track Package
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
