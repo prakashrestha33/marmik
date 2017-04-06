@@ -28,7 +28,7 @@
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('batch.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Create batch</span>
+                            <span class=" btn btn-sm btn-success" title="Create new category">Send on batch</span>
                         </a>
                     </div>
 
@@ -45,9 +45,9 @@
                             <tbody>
                             @foreach($batch as $list)
                                 <tr>
-                                    <td>{{$list->id}}</td>
+                                    <td>{{$list->batch_id}}</td>
                                     <td> {{$list->tracking_id}}</td>
-                                    <td> <button  > view location</button></td>
+                                    <td> <button> view location</button></td>
 
 
                                 </tr>
@@ -63,30 +63,7 @@
             </div>
             <!-- /.col -->
         </div>
-        <div class="example-modal">
-            <div class="modal modal-primary">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">Primary Modal</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>One fine body&hellip;</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-outline">Save changes</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- /.modal -->
-        </div>
-        <!-- /.row -->
+
     </section>
 
 @endsection

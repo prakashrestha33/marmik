@@ -13,6 +13,7 @@
             <div class="col-md-offset-2">
             {!! Form::open(array('route'=>'shipment.store', 'method'=>'post' ))!!}
             {{ Form::hidden('tracking_id', rand(1,1000000)) }}
+            {{ Form::hidden('delivery_status', 0) }}
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                         <label for="customer_name">Customer Name</label>

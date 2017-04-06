@@ -30,8 +30,7 @@ class CreateShipmentsTable extends Migration
             $table->date('delivery_date');
             $table->boolean('delivery_status');
             $table->timestamps();
-//            $table->foreign('customer_id')->references('id')->on('customers')
-//                ->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 

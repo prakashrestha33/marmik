@@ -20,6 +20,7 @@ class Shipment extends Model
         'delivery_city', 'delivery_street_name', 'delivery_home_no',
         'tracking_id',
         'delivery_date',
+        'delivery_status',
         'departure_date'
 
 
