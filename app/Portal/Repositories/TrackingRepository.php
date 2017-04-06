@@ -35,4 +35,12 @@ class TrackingRepository
         }
         return $result;
     }
+
+    public function getLocation($tracking_id)
+    {
+        $location= $this->trackingPost->select('*')
+                                    ->join('batches','batches.id','tracking_posts.batch_id')
+                                        ->where('batches.tracking_id',$tracking_id)->first();
+        return $location;
+    }
 }

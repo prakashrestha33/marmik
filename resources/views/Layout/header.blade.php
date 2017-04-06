@@ -1,4 +1,3 @@
-<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +25,6 @@
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
 
     <header class="main-header">
         <!-- Logo -->
@@ -53,7 +51,10 @@
                                         Login
                                 </a>
                             </li>
+<<<<<<< HEAD
                             <li><a href="{{ route('register') }}">Register</a></li>
+=======
+>>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -107,6 +108,17 @@
 
             </li>
             <li>
+<<<<<<< HEAD
+=======
+                <ul><a href="/admin/shipment_type">
+                        <i class="fa fa-user"></i> <span>Shipment type</span>
+
+                    </a>
+                </ul>
+
+            </li>
+            <li>
+>>>>>>> d2e21dfb4cba4c9b29131ac621e89425f80b009e
                 <ul><a href="/admin/batch">
                         <i class="fa fa-user"></i> <span>Batch</span>
 

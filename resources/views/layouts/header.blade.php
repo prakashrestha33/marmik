@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Postracker') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/master/app.css') }}" rel="stylesheet">
@@ -64,6 +64,12 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+
+                                <li>
+                                    {!! Html::linkRoute('password','password',array( Auth::user()->id),array('class'=>''))!!}
+                                </li>
+
+
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -75,6 +81,9 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
+
+
+
                             </ul>
                         </li>
                     @endif

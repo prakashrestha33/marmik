@@ -47,4 +47,8 @@ class TrackingService
         ];
         return $data;
     }
+
+    public function getlocation($tracking_id){
+        return $this->trackingRepository->getLocation($tracking_id);
+    }
 }

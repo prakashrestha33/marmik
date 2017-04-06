@@ -33,18 +33,16 @@
             </thead>
             <tbody>
             <tr>
-                <td>{{$package->type}} </td>
+
+                <td>Package:  {{$package->type}} </td>
                 <td id="textone">${{$package->price}}</td>
             </tr>
             <tr>
-                <td>Shipment:  {{$pickup->shipment_type}}</td>
+                <td>Shipment:  {{$ship_type->name}}</td>
                 <td  id="texttwo">
-                    <?php $x = Config::get('custom.shipment_type');?>
-                    @foreach($x as $p=>$val)
-                        @if($pickup->shipment_type==$p)
-                            ${{$val}}
-                        @endif
-                    @endforeach
+                    {{$ship_type->price}}
+
+
                 </td>
             </tr>
             </tbody>
@@ -61,7 +59,7 @@
                 <tbody>
                 <tr>
                     <td>Subtotal</td>
-                    <td>${{$val +$package->price}}</td>
+                    <td>${{$ship_type->price +$package->price}}</td>
                 </tr>
                 <tr>
                     <td>Pickup Charge</td>
@@ -69,7 +67,7 @@
                 </tr>
                 <tr style="font-style: italic">
                     <td>Total</td>
-                    <td>${{20+$val +$package->price}}</td>
+                    <td>${{20+$ship_type->price +$package->price}}</td>
                 </tr>
                 </tbody>
             </table>

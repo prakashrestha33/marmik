@@ -39,3 +39,7 @@ Route::get('/package/{id}/checkout', 'CustomerController@checkout')->name('packa
 Route::get('/profile/{id}/history', 'CustomerController@history')->name('profile.history');
 
 Route::post('api/tracking/create','TrackingController@track');
+
+//password change
+Route::get('/profile/{id}/password', 'CustomerController@password')->name("password");
+Route::patch('/profile/{id}/password', 'CustomerController@changepassword')->name("changepassword");
