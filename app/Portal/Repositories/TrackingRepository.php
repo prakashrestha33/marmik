@@ -29,7 +29,10 @@ class TrackingRepository
 
     public function insert($request)
     {
+
+        // dd($request);
         $result =$this->trackingPost->insert($request);
+        dd($result);
         if (!$result){
             return null;
         }
