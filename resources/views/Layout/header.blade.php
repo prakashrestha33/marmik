@@ -38,11 +38,14 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>P</b>T</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Pos</b>Tracker</span>
+            <span class="logo-lg"><b>PosT</b>racker</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
 
 
             <div class="navbar-custom-menu">
@@ -95,68 +98,62 @@
     <aside class="main-sidebar thisSide">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-
-            <li class="active treeview">
-                <ul><a href="/admin/shipment">
-                        <i class="fa fa-dashboard"></i> <span>Shipment</span>
-
-                    </a></ul>
-            </li>
-            <li>
-                <ul><a href="/admin/package">
-                        <i class="fa fa-user"></i> <span>Package</span>
+            <ul class="sidebar-menu">
+                <li class="header">DASHBOARD</li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="header">SHIPMENTS</li>
+                <li class="treeview">
+                    <a href="/admin/shipment">
+                        <i class="fa fa-map-pin"></i> <span>Shipment</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="/admin/shipment_type">
+                        <i class="fa fa-cart-plus"></i> <span>Shipment Type</span>
 
                     </a>
-                </ul>
-
-            </li>
-            <li>
-                <ul><a href="/admin/shipment_type">
-                        <i class="fa fa-user"></i> <span>Shipment type</span>
-
-                    </a>
-                </ul>
-
-            </li>
-            <li>
-
-                <ul><a href="/admin/batch">
-                        <i class="fa fa-user"></i> <span>Batch</span>
+                </li>
+                <li class="header">PACKAGE</li>
+                <li class="treeview">
+                    <a href="/admin/package">
+                        <i class="fa fa-gift"></i> <span>Packages</span>
 
                     </a>
-                </ul>
-
-            </li>
-            <li>
-                <ul><a href="/admin/packages/report">
-                        <i class="fa fa-user"></i> <span>Package Report</span>
-
-                    </a>
-                </ul>
-
-            </li>
-            <li>
-                <ul><a href="/admin/customer">
-                        <i class="fa fa-user"></i> <span>Customer</span>
+                </li>
+                <li class="header">BATCH</li>
+                <li class="treeview">
+                    <a href="/admin/batch">
+                        <i class="fa fa-calendar-plus-o"></i> <span>Batch</span>
 
                     </a>
-                </ul>
+                </li>
+                <li class="header">LOST PACKAGE</li>
+                <li class="treeview">
+                    <a href="/admin/packages/report">
+                        <i class="fa fa-list-alt"></i> <span>Package Report</span>
 
-            </li>
-
-
-            @role('admin')
-            <li class="active">
-                <ul>
-                    <a href="/admin/staff">
-                        <i class="fa fa-users"></i> <span>Staff</span>
                     </a>
-                </ul>
-            </li>
-            @endrole
+                </li>
+                <li class="header">CUSTOMER</li>
+                <li class="treeview">
+                    <a href="/admin/customer">
+                        <i class="fa fa-users"></i> <span>Customer</span>
 
-
+                    </a>
+                </li>
+                <li class="header">STAFF</li>
+                @role('admin')
+                <li class="treeview">
+                        <a href="/admin/staff">
+                            <i class="fa fa-users"></i> <span>Staff</span>
+                        </a>
+                </li>
+                @endrole
+            </ul>
         </section>
-
     </aside>
 

@@ -72,7 +72,7 @@
                     <label>Package Type</label>
                 </div>
 
-        {{Form::submit('Proceed to Checkout', array('class'=>'btn waves-effect yellow darken-4'))}}
+        {{Form::submit('Proceed to Checkout', array('class'=>'waves-effect waves-light btn yellow darken-4'))}}
         {!! Form::close() !!}
         </div>
     </div>

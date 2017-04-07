@@ -20,7 +20,7 @@
 
 
                 <div align="right" >
-                    {{Form::submit('Send', array('class'=>'btn waves-effect yellow darken-4','title'=>'Save the Shipment'))}}
+                    {{Form::submit('Send', array('class'=>'waves-effect waves-light btn light-blue darken-3','title'=>'Save Shipment'))}}
                     {!! Form::close() !!}
 
                 </div>
