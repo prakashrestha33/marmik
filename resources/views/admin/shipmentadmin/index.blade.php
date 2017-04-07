@@ -8,12 +8,13 @@
                 <div class="box">
 
                     <div class="box-header">
-                        <h3 class="box-title">Shipment Details</h3>
+                        <h3 class="box-title" style="font-size: 30px">Shipment Details</h3>
                     </div>
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('shipment.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Create shipment</span>
+                            <span class=" btn btn-large btn-success" title="Create new shipment">
+                                <i class="fa fa-plus-circle"></i> Create Shipment</span>
                         </a>
                     </div>
 
@@ -40,12 +41,13 @@
                                 <td>{{$list->delivery_date}}</td>
                                 <td>
                                         <a href="{{route('shipment.show',$list->id)}}">
-                                            <span class=" btn btn-sm btn-primary" title="View details">Detail</span>
+                                            <span class=" btn btn-primary" title="View details">
+                                                <i class="fa fa-info-circle"></i> Detail</span>
                                         </a>
                                     <a href="{{route('shipment.edit',$list->id)}}">
                                         <button class="btn btn-warning pad" data-toggle="popover" data-trigger="hover"
                                                 data-placement="top" data-content="Edit the {{$list->id}} delivery">
-                                            <i class="fa fa-edit">edit</i>
+                                            <i class="fa fa-edit"> Edit</i>
                                         </button>
                                     </a>
                                 </td>

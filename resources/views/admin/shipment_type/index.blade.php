@@ -7,12 +7,13 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Shipment Type List</h3>
+                        <h3 class="box-title" style="font-size: 30px">Shipment Type List</h3>
                     </div>
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('shipment.type.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Create Shipment Type</span>
+                            <span class=" btn btn-large btn-success" title="Create new Shipment Type">
+                                <i class="fa fa-plus-circle"></i> Create Shipment Type</span>
                         </a>
                     </div>
 
@@ -36,7 +37,7 @@
                                         <a href="{{route('shipment.type.update',$t->id)}}">
                                             <button class="btn btn-warning pad" data-toggle="popover" data-trigger="hover"
                                                     data-placement="top" data-content="Edit the {{$t->id}} shipment type">
-                                                <i class="fa fa-edit">edit</i>
+                                                <i class="fa fa-edit"> Edit</i>
                                             </button>
                                         </a>
 

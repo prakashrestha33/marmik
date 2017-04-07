@@ -3,9 +3,10 @@
 @section('main-content')
 
     @role('admin')
+    <section class="content  col-md-10 ">
         <h2>Create Staff </h2>
                     {!! Form::open(array('route'=>'staff.store', 'method'=>'post' ))!!}
-
+        <div class="col-md-offset-2">
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                 <label for="firstName">First Name:</label>
@@ -56,10 +57,12 @@
         </div>
         <div class="clearfix pad"></div>
         <div align="right" >
-            {{Form::submit('ADD', array('class'=>'btn btn-bg btn-primary ','title'=>'Save the Staff'))}}
+            {{Form::submit('ADD STAFF', array('class'=>'btn btn-bg btn-success ','title'=>'Save the Staff'))}}
             {!! Form::close() !!}
 
         </div>
+        </div>
+    </section>
    @endrole
 
     @endsection

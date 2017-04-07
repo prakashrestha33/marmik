@@ -7,12 +7,13 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Package type List</h3>
+                        <h3 class="box-title" style="font-size: 30px">Package type List</h3>
                     </div>
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('package.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Create package</span>
+                            <span class=" btn btn-larges btn-success" title="Create new package">
+                                <i class="fa fa-plus-circle"></i> Create package</span>
                         </a>
                     </div>
 
@@ -38,7 +39,7 @@
                                         <a href="{{route('package.edit',$list->id)}}">
                                             <button class="btn btn-warning pad" data-toggle="popover" data-trigger="hover"
                                                     data-placement="top" data-content="Edit the {{$list->id}} delivery">
-                                                <i class="fa fa-edit">edit</i>
+                                                <i class="fa fa-edit"> Edit</i>
                                             </button>
                                         </a>
                                     </td>

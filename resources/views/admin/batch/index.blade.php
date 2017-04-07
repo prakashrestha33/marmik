@@ -23,7 +23,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Package type List</h3>
+                        <h3 class="box-title" style="font-size: 30px">Package Types</h3>
                     </div>
 
                     <div align="right" style="padding: 10px">
@@ -47,7 +47,7 @@
                                 <tr>
                                     <td>{{$list->id}}</td>
                                     <td> {{$list->tracking_id}}</td>
-                                    <td> <button  > view location</button></td>
+                                    <td> <button> view location</button></td>
 
 
                                 </tr>

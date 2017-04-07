@@ -8,7 +8,7 @@
                 <div class="box">
                     @role('admin')
                     <div class="box-header">
-                        <h3 class="box-title">Customer Details</h3>
+                        <h3 class="box-title" style="font-size: 30px">Customer Details</h3>
                     </div>
 
 

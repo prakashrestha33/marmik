@@ -145,6 +145,13 @@
 
                     </a>
                 </li>
+                <li class="header">PICKUP REQUESTS</li>
+                <li class="treeview">
+                    <a href="/admin/packages/pickup_list">
+                        <i class="fa fa-users"></i> <span>Pickup Requests</span>
+
+                    </a>
+                </li>
                 <li class="header">STAFF</li>
                 @role('admin')
                 <li class="treeview">

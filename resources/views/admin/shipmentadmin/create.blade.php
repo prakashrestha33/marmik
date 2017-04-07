@@ -170,7 +170,7 @@
             </div>
             <div class="clearfix pad"></div>
             <div align="right" >
-                {{Form::submit('ADD', array('class'=>'btn btn-bg btn-primary ','title'=>'Save the Shipment'))}}
+                {{Form::submit('ADD SHIPMENT', array('class'=>'btn btn-bg btn-primary ','title'=>'Save the Shipment'))}}
                 {!! Form::close() !!}
 
             </div>
