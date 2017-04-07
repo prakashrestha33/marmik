@@ -23,10 +23,16 @@
         var app_url = "{{Request::root()}}";
     </script>
 
+    <style>
+        .thisHeader{
+            margin-top: -20;
+        }
+    </style>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
-    <header class="main-header">
+    <header class="main-header thisHeader">
         <!-- Logo -->
         <a href="/home" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -86,7 +92,7 @@
         </nav>
     </header>
     <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
+    <aside class="main-sidebar thisSide">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
 

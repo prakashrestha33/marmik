@@ -54,7 +54,7 @@
                                     class="material-icons center-align">assignment_ind</i> Register</a>
                     @else
 
-                        <button class="btn- btn-large red"> {{ Auth::user()->name }}</button><br>
+                        <button class="btn- btn-large teal"> {{ Auth::user()->name }}</button><br>
 
                         <div class="fixed-action-btn vertical click-to-toggle">
                             <a class="btn-floating btn-large blue darken-2" data-tooltip="Bla">
