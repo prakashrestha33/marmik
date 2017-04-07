@@ -8,6 +8,8 @@ use App\Portal\Services\PackageService;
 use App\Portal\Services\PickupService;
 use App\Portal\Services\ShipmentService;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\PDF;
+use Illuminate\Support\Facades\App;
 
 class CustomerController extends Controller
 {
@@ -93,5 +95,14 @@ class CustomerController extends Controller
             return redirect()->route('landing',$id)->withSuccess('password Changed');
         }
         return back()->withErrors('old password may be wrong');
+    }
+
+    public function getPdf($id)
+    {
+        $billings=$this->pickupService->getpickupdetailbycusid($id);
+
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('front.pdf',compact('billings'));
+        return  ($pdf->stream());
     }
 }

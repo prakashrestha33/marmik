@@ -21,8 +21,9 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+
 </head>
-<body>
+<body class="hold-transition skin-blue sidebar-mini">
 <div id="app">
     <nav class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">

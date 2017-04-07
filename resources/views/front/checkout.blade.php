@@ -24,7 +24,7 @@
 {{--{{$pickup}}--}}
     <h5 align="left" style="margin-top: 30px">Checkout</h5>
     <div class="row">
-        <table>
+        <table class="striped">
             <thead>
             <tr>
                 <th>Item</th>
@@ -55,7 +55,7 @@
 
 
         <div class="col s5">
-            <table>
+            <table class="highlight">
                 <tbody>
                 <tr>
                     <td>Subtotal</td>
@@ -74,7 +74,9 @@
         </div>
     </div>
     <div class="input field col s12 m12" align="right">
-        <a class="waves-effect yellow darken-4 btn" href="/profile/{{$pickup->customer_id}}/history"><i class="material-icons right">done_all</i>Done</a>
+        <a class="waves-effect waves-light btn yellow darken-4 btn" href="/profile/{{$pickup->customer_id}}/history"><i class="material-icons right">done_all</i>Done</a>
     </div>
+
+    {!! Html::linkRoute('GetPdf',' Pdf',array($pickup->customer_id),array('class'=>' btn btn-primary fa fa-file-pdf-o', 'title'=>"View pdf"))!!}}
 </div>
-    @endsection
+@endsection

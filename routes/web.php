@@ -43,3 +43,7 @@ Route::post('api/tracking/create','TrackingController@track');
 //password change
 Route::get('/profile/{id}/password', 'CustomerController@password')->name("password");
 Route::patch('/profile/{id}/password', 'CustomerController@changepassword')->name("changepassword");
+
+//pdf generating
+
+Route::get('pdf/{id}', 'CustomerController@getPdf')->name("GetPdf");
