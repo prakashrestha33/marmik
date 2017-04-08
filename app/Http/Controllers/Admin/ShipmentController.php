@@ -141,4 +141,16 @@ class ShipmentController extends Controller
         return back()->withErrors("Something went wrong");
     }
 
+public  function track_idstatus(Request $request)
+{
+        dd($request);
+
+    $data = $request->all();
+    $data = array_except($data, ['_token', 'to', 'remove']);
+//dd($data);
+    $response = $this->shipmentService->checktracking_id($data);
+
+    return response()->json($response);
+}
+
 }

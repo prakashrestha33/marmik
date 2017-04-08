@@ -31,9 +31,13 @@ class TrackingService
 
     public function checkbatch($request)
     {
-        $result=$this->trackingRepository->insert($request);
-
-        if ($result ==null){
+        $data = $this->trackingRepository->checkBatch($request['batch_id']);
+        if (!$data) {
+            $result = $this->trackingRepository->insert($request);
+        } else {
+            $result = $this->trackingRepository->update($request,$data->id);
+        }
+        if ($result == null) {
             $data = [
                 "error" => true,
                 "message" => "Data Cannot be Created"

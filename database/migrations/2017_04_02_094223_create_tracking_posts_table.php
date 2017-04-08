@@ -16,12 +16,12 @@ class CreateTrackingPostsTable extends Migration
         Schema::create('tracking_posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('address_name');
-            $table->double('latitude');
-            $table->double('longitude');
-            $table->integer('batch_id')->unsigned();
+            $table->string('latitude');
+            $table->string('longitude');
+            $table->bigInteger('batch_id')->unique();
 
             $table->timestamps();
-            $table->foreign('batch_id')->references('id')->on('batches')
+            $table->foreign('batch_id')->references('batch_id')->on('batches')
                 ->onUpdate('cascade')->onDelete('cascade');
         });
     }

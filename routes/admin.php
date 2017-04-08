@@ -5,7 +5,10 @@ Route::resource('/customer', 'CustomerAdminController');
 Route::resource('/package', 'PackageAdminController');
 Route::resource('/batch', 'BatchController');
 
+//batch location
+Route::get('/batch_location/{id}', 'BatchController@location')->name('batch.location');
 
+//staff
 Route::get('/staff', 'AdminController@indexStaff')->name('staff.index');
 Route::get('/staff/create', 'AdminController@createStaff')->name('staff.create');
 Route::get('/staff/{id}/edit', 'AdminController@editStaff')->name('staff.edit');

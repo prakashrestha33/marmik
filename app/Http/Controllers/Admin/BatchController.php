@@ -30,6 +30,7 @@ class BatchController extends Controller
     public function index()
     {
         $batch= $this->batchService->getallbatch();
+
        return view('admin.batch.index',compact('batch'));
     }
 
@@ -55,6 +56,12 @@ class BatchController extends Controller
             return redirect()->route('batch.index')->withSuccess("Batch added!");
         }
         return back()->withErrors("Something went wrong");
+    }
+
+    public function location($id)
+    {
+        $location=$this->batchService->getbatchId($id);
+        return view('admin.batch.location',compact('location'));
     }
 
     /**

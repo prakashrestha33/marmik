@@ -2,28 +2,14 @@
 
 
 @section('main-content')
-    <style>
-        .example-modal .modal {
-            position: relative;
-            top: auto;
-            bottom: auto;
-            right: auto;
-            left: auto;
-            display: block;
-            z-index: 1;
-        }
 
-        .example-modal .modal {
-            background: transparent !important;
-        }
-    </style>
 
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Package type List</h3>
+                        <h3 class="box-title">Batch List</h3>
                     </div>
 
                     <div align="right" style="padding: 10px">
@@ -47,7 +33,10 @@
                                 <tr>
                                     <td>{{$list->batch_id}}</td>
                                     <td> {{$list->tracking_id}}</td>
-                                    <td> <button> view location</button></td>
+                                    <td>  <a href="{{route('batch.location',$list->id)}}">
+                                            <span class=" btn btn-sm btn-success" title="Batch location">Location</span>
+                                        </a>
+                                    </td>
 
 
                                 </tr>
