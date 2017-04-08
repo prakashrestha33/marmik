@@ -29,7 +29,7 @@ class PackageLostRepository
     public function addPackageReport($formData)
     {
         try {
-            dd($formData);
+//            dd($formData);
             $this->lostPackage->create($formData);
             return true;
         } catch (QueryException $e) {

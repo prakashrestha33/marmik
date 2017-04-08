@@ -44,5 +44,12 @@ class BatchRepository
         return $this->batch->select('*')->get();
     }
 
+    public function getBatchIdtrack($id)
+    {
+        return $this->batch->select('*')
+                            ->join('tracking_posts','tracking_posts.batch_id','batches.batch_id')
+                            ->where('batches.id',$id)->first();
+    }
+
 
 }

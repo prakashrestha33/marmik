@@ -56,12 +56,9 @@ class PackageController extends Controller
         if ($result=$this->shipmentService->getpackagebytrack($request))
         {
             $location= $this->trackingService->getlocation($result->tracking_id);
-
             return view('front.tracked',compact('result','location'))->withSuccess("package tracked!");
         }
         return back()->withErrors("Check Tracking Id once more");
     }
-
-
 
 }

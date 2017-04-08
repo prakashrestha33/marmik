@@ -38,7 +38,10 @@ Route::post('/package/pickup', 'CustomerController@pickupstore')->name('package.
 Route::get('/package/{id}/checkout', 'CustomerController@checkout')->name('package.checkout');
 Route::get('/profile/{id}/history', 'CustomerController@history')->name('profile.history');
 
+
+//api
 Route::post('api/tracking/create','TrackingController@track');
+Route::post('api/tracking_id/status','Admin\ShipmentController@track_idstatus');
 
 //password change
 Route::get('/profile/{id}/password', 'CustomerController@password')->name("password");

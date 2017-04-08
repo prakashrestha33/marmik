@@ -39,7 +39,6 @@ class ShipmentRepository
     {
 
         try {
-//            dd($formData);
             $this->shipment->create($formData);
             return true;
         } catch (QueryException $e) {
@@ -110,6 +109,15 @@ class ShipmentRepository
     {
        return $this->shipmentType->select('*')->where('id',$shipment_type)->first();
 
+    }
+
+    public function updatestatus($data, $id)
+    {
+        $data1=Shipment::find($id);
+        dd($data1);
+        $data1['delivery_status']=$data['delivery_status'];
+        $data1->update();
+        return $data;
     }
 
 

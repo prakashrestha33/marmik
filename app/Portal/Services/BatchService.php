@@ -38,4 +38,9 @@ class BatchService
         return $this->batchRepository->getAllBatch();
     }
 
+    public function getbatchId($id)
+    {
+        return $this->batchRepository->getBatchIdtrack($id);
+    }
+
 }
