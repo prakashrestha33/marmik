@@ -19,4 +19,4 @@ use Illuminate\Http\Request;
 
 //api
 Route::post('/tracking/create','TrackingController@track');
-Route::put('/tracking_id/status','TrackingController@track_idstatus');
+Route::post('/tracking_id/status','TrackingController@track_idstatus');
