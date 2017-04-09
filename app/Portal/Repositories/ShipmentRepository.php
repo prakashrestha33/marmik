@@ -113,8 +113,8 @@ class ShipmentRepository
 
     public function updatestatus($data, $id)
     {
-        $data1=Shipment::find($id);
-        dd($data1);
+        $query=$this->shipment->select('*')->where('tracking_id',$id)->first();
+        $data1=Shipment::find($query->id);
         $data1['delivery_status']=$data['delivery_status'];
         $data1->update();
         return $data;

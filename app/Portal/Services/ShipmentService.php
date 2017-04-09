@@ -77,51 +77,21 @@ class ShipmentService
 
     public function checktracking_id($data)
     {
+        $result = $this->shipmentRepository->updatestatus($data,$data['tracking_id']);
 
-//        $data = $this->trackingRepository->checkBatch($request['batch_id']);
-//        if (!$data) {
-//            $result = $this->trackingRepository->insert($request);
-//        } else {
-//            $result = $this->trackingRepository->update($request,$data->id);
-//        }
-//        if ($result == null) {
-//            $data = [
-//                "error" => true,
-//                "message" => "Data Cannot be Created"
-//            ];
-//            return $data;
-//        }
-//
-//        $data = [
-//            "error" => false,
-//            "message" => "Data created Successfully",
-//        ];
-//        return $data;
-//
+        if ($result == null) {
+            $data = [
+                "error" => true,
+                "message" => "Data Cannot be Created"
+            ];
+            return $data;
+        }
 
-
-
-
-
-
-
-
-
-//        $result = $this->shipmentRepository->updatestatus($data,$data->id);
-//
-//        if ($result == null) {
-//            $data = [
-//                "error" => true,
-//                "message" => "Data Cannot be Created"
-//            ];
-//            return $data;
-//        }
-//
-//        $data = [
-//            "error" => false,
-//            "message" => "Data created Successfully",
-//        ];
-//        return $data;
+        $data = [
+            "error" => false,
+            "message" => "Data updated Successfully",
+        ];
+        return $data;
     }
 
 
