@@ -58,6 +58,10 @@ class ShipmentService
         return $this->shipmentRepository->getPackagebyTracking($tid);
     }
 
+    public function getshipbytrackid($id)
+    {
+        return $this->shipmentRepository->getPackagebyTracking($id);
+    }
     public function add_shipment_type($request)
     {
         $formData=$request->all();
@@ -78,7 +82,6 @@ class ShipmentService
     public function checktracking_id($data)
     {
         $result = $this->shipmentRepository->updatestatus($data,$data['tracking_id']);
-
         if ($result == null) {
             $data = [
                 "error" => true,

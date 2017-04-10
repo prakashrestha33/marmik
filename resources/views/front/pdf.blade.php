@@ -1,80 +1,85 @@
 <div class="row" align="center">
-    <div class="col-md-12">
         <div class="box" style="padding: 10px">
+
+                <img src="asd.jpg" height="45px">
             <div class="box-header">
-                <h3 class="box-title">ADVANCE MARKETING PVT. LTD. </h3>
+
+                <h2 class="box-title">POSTRACKER Billing</h2>
             </div>
-            <div class="pad" align="left">
+
+            @foreach($billings as $bill)
                 <div class="row">
-                    <label class="col-sm-6 "> Distributor Name:</label>
-                    <p>{{$billings->id}}</p>
+                    <label class="col-sm-6 "> Receiver Address:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['receiver_address']}}
                 </div>
                 <div class="row">
-                    <label class="col-sm-6 ">Product type:</label>
+                    <label class="col-sm-6 "> Receiver Contact:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['contact']}}
                 </div>
                 <div class="row">
-                    <label class="col-sm-6 ">Quantity:</label>
+                    <label class="col-sm-6 ">Pickup date:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['pickup_date']}}
                 </div>
                 <div class="row">
-                    <label class="col-sm-6 ">Price:</label>
+                    <label class="col-sm-6 ">Shipment type:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['shipment_type']}}
+                </div>
+                <div class="row">
+                    <label class="col-sm-6 ">Package Type:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;    {{$bill['package_id']}}
+
                 </div>
 
-                <div class="row">
-                    <label class="col-sm-6 ">Ordered Date:</label>
-                </div>
-                <h3>Address</h3>
 
-                <div class="col-md-5 col-md-offset-3">
-                    <div class="row">
-                        <label class="col-sm-6 ">Zone:</label>
-                    </div>
-                    <div class="row">
-                        <label class="col-sm-6 ">District:</label>
-                    </div>
-                    <div class="row">
-                        <label class="col-sm-6 ">City:</label>
-                    </div>
-                    <div class="row">
-                        <label class="col-sm-6 ">Mobile:</label>
-                    </div>
-                    <div class="row">
-                        <label class="col-sm-6 ">Phone:</label>
+                <h3>Estimated Bill</h3>
+
+                    <table class="striped" style="padding-left: 100px; padding-top: 20px">
+                        <thead>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;Item</th>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+
+                            <td>Package: &nbsp;&nbsp;&nbsp;&nbsp;  {{$package->type}} </td>
+                            <td id="textone"> &nbsp;&nbsp;&nbsp;&nbsp;${{$package->price}}</td>
+                        </tr>
+                        <tr>
+                            <td>Shipment:  &nbsp;&nbsp;&nbsp;&nbsp;{{$ship_type->name}}</td>
+                            <td  id="texttwo">
+                                &nbsp;&nbsp;&nbsp;&nbsp;${{$ship_type->price}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                <div class="row" style="padding-left: 400px; padding-top: 20px">
+
+                    <div class="col-md-6">
+                        <table class="striped" >
+                            <tbody>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;${{$ship_type->price +$package->price}}</td>
+                            </tr>
+                            <tr>
+                                <td>Pickup Charge</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;$20</td>
+                            </tr>
+                            <tr style="font-style: italic">
+                                <td>Total</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;${{20+$ship_type->price +$package->price}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div>
             <br>
             <br>
+            @endforeach
 
 
-            {{--<table   align="left" style="width:100%">--}}
-
-                    {{--<tr>--}}
-                        {{--<th>Gross Total:</th>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th>Discount:</th>--}}
-                        {{--<td> {{$ob->discount}}%</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th>VAT:</th>--}}
-                        {{--<td>{{$ob->vat}}%</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th> Shipping Charge:</th>--}}
-                        {{--<td> Rs. {{number_format($ob->shipping_charge, 2)}}</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th>Grand Total :</th>--}}
-                        {{--<td> Rs. {{number_format($ob->grand_total, 2)}}</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th> Bill Created At:</th>--}}
-                        {{--<td> {{$ob->created_at}}</td>--}}
-                    {{--</tr>--}}
-
-                {{--@endforeach--}}
-
-            {{--</table>--}}
         </div>
-    </div>
 </div>

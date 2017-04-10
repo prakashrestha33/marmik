@@ -99,10 +99,14 @@ class CustomerController extends Controller
 
     public function getPdf($id)
     {
+        $pickup=$this->pickupService->getpickupdetail($id);
+        $package=$this->packageService->getpackageid($pickup->package_id);
+        $ship_type= $this->shipmentService->getShipmenttypeid($pickup->shipment_type);
+
         $billings=$this->pickupService->getpickupdetailbycusid($id);
 
         $pdf = App::make('dompdf.wrapper');
-        $pdf->loadView('front.pdf',compact('billings'));
+        $pdf->loadView('front.pdf',compact('billings','pickup','package','ship_type'));
         return  ($pdf->stream());
     }
 }
