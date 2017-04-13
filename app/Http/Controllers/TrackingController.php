@@ -54,12 +54,13 @@ class TrackingController extends Controller
     {
         try {
         $ship= $this->shipmentService->getshipbytrackid($id);
+            $sms= 'Dear ' . $ship->customer_name.' , Your shipment with Tracking ID:'.$ship->tracking_id. ' has been delivered.Thankyou';
             $args =
                 http_build_query(array(
                     'token' => env('SPARROW_TOKEN'),
                     'from'  => 'Demo',
                     'to'    =>  $ship->receiver_mobile_no,
-                    'text'  =>  'Dear Customer ,Your shipment with Tracking ID has been delivered.Thankyou'));
+                    'text'  =>   $sms));
             $url = "http://api.sparrowsms.com/v2/sms/";
 
 
