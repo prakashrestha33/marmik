@@ -24,8 +24,8 @@
                                 <th> ID</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
-                                <th>email </th>
-                                <th>Created at </th>
+                                <th>Email</th>
+                                <th>Created On</th>
                             </tr>
                             </thead>
                             <tbody>

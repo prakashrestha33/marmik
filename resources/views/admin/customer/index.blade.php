@@ -18,7 +18,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>email</th>
+                                <th>Email</th>
                                 <th>Contact</th>
                                 <th>Address</th>
 
@@ -49,6 +49,6 @@
         <!-- /.row -->
     </section>
     @role('staff')
-    <h2>for the staff view</h2>
+    <h2>For Staff View</h2>
     @endrole
 @endsection

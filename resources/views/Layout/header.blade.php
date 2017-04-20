@@ -117,10 +117,17 @@
 
                     </a>
                 </li>
-                <li class="header">PACKAGE</li>
                 <li class="treeview">
                     <a href="/admin/package">
                         <i class="fa fa-gift"></i> <span>Packages</span>
+
+                    </a>
+                </li>
+
+                <li class="header">PICKUP REQUESTS</li>
+                <li class="treeview">
+                    <a href="/admin/packages/pickup_list">
+                        <i class="fa fa-users"></i> <span>Pickup Requests</span>
 
                     </a>
                 </li>
@@ -131,13 +138,6 @@
 
                     </a>
                 </li>
-                <li class="header">LOST PACKAGE</li>
-                <li class="treeview">
-                    <a href="/admin/packages/report">
-                        <i class="fa fa-list-alt"></i> <span>Package Report</span>
-
-                    </a>
-                </li>
                 <li class="header">CUSTOMER</li>
                 <li class="treeview">
                     <a href="/admin/customer">
@@ -145,18 +145,18 @@
 
                     </a>
                 </li>
-                <li class="header">PICKUP REQUESTS</li>
                 <li class="treeview">
-                    <a href="/admin/packages/pickup_list">
-                        <i class="fa fa-users"></i> <span>Pickup Requests</span>
+                    <a href="/admin/packages/report">
+                        <i class="fa fa-list-alt"></i> <span>Package Report</span>
 
                     </a>
                 </li>
+
                 <li class="header">STAFF</li>
                 @role('admin')
                 <li class="treeview">
                         <a href="/admin/staff">
-                            <i class="fa fa-users"></i> <span>Staff</span>
+                            <i class="fa fa-users"></i> <span>Staffs</span>
                         </a>
                 </li>
                 @endrole

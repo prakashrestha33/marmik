@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} clearfix">
-                <label for="email" class="col-sm-4 control-label">email</label>
+                <label for="email" class="col-sm-4 control-label">Email</label>
 
                 <div class="col-sm-8">
                     {{ Form::email('email',null,array('class'=>'form-control'))}}

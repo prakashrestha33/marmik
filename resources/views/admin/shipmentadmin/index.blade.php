@@ -13,7 +13,7 @@
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('shipment.create')}}">
-                            <span class=" btn btn-large btn-success" title="Create new shipment">
+                            <span class=" btn btn-large btn-success" title="Add new shipment">
                                 <i class="fa fa-plus-circle"></i> Create Shipment</span>
                         </a>
                     </div>

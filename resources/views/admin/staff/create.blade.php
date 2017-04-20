@@ -9,7 +9,7 @@
         <div class="col-md-offset-2">
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                <label for="firstName">First Name:</label>
+                <label for="firstName">First Name</label>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
@@ -33,7 +33,7 @@
         </div>
         <div class="row clearfix">
             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                <label for="email">Email:</label>
+                <label for="email">Email</label>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
@@ -45,7 +45,7 @@
         </div>
         <div class="row clearfix">
             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                <label for="password">Password:</label>
+                <label for="password">Password</label>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">

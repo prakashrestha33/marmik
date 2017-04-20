@@ -14,7 +14,6 @@
         <li><a href="#!" class="waves-effect"><i class="material-icons">redeem</i>Request Pickup</a></li>
         <li><a href="#!" class="waves-effect"><i class="material-icons">search</i>Lost Packages</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
         <li><a class="waves-effect" href="#!">Log Out</a></li>
     </ul>
 

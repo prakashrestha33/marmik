@@ -12,7 +12,7 @@
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('package.create')}}">
-                            <span class=" btn btn-larges btn-success" title="Create new package">
+                            <span class=" btn btn-larges btn-success" title="Add new package">
                                 <i class="fa fa-plus-circle"></i> Create package</span>
                         </a>
                     </div>

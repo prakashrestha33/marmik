@@ -45,36 +45,6 @@
             <br>
             <br>
 
-
-            {{--<table   align="left" style="width:100%">--}}
-
-                    {{--<tr>--}}
-                        {{--<th>Gross Total:</th>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th>Discount:</th>--}}
-                        {{--<td> {{$ob->discount}}%</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th>VAT:</th>--}}
-                        {{--<td>{{$ob->vat}}%</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th> Shipping Charge:</th>--}}
-                        {{--<td> Rs. {{number_format($ob->shipping_charge, 2)}}</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th>Grand Total :</th>--}}
-                        {{--<td> Rs. {{number_format($ob->grand_total, 2)}}</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th> Bill Created At:</th>--}}
-                        {{--<td> {{$ob->created_at}}</td>--}}
-                    {{--</tr>--}}
-
-                {{--@endforeach--}}
-
-            {{--</table>--}}
         </div>
     </div>
 </div>

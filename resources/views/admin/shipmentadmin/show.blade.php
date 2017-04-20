@@ -17,7 +17,7 @@
                 {{$shipid->customer_name}}
             </div>
             <div class="row">
-                <label class="col-sm-6 "> Receiver Name:</label>
+                <label class="col-sm-6 "> Receiver Name :</label>
                 {{$shipid->receiver_name}}
             </div>
             <div class="row">

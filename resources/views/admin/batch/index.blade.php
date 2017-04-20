@@ -28,7 +28,7 @@
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('batch.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Create batch</span>
+                            <span class=" btn btn-sm btn-success" title="Create a new Batch">Create batch</span>
                         </a>
                     </div>
 
@@ -37,8 +37,8 @@
                             <thead>
                             <tr>
                                 <th>Batch ID</th>
-                                <th>tracking Id</th>
-                                <th>location</th>
+                                <th>Tracking ID</th>
+                                <th>Location</th>
 
                             </tr>
                             </thead>
@@ -47,7 +47,7 @@
                                 <tr>
                                     <td>{{$list->id}}</td>
                                     <td> {{$list->tracking_id}}</td>
-                                    <td> <button> view location</button></td>
+                                    <td> <button> View Location</button></td>
 
 
                                 </tr>
