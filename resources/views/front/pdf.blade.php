@@ -7,26 +7,25 @@
                 <h2 class="box-title">POSTRACKER Billing</h2>
             </div>
 
-            @foreach($billings as $bill)
                 <div class="row">
                     <label class="col-sm-6 "> Receiver Address:</label>
-                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['receiver_address']}}
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$billings->receiver_address}}
                 </div>
                 <div class="row">
                     <label class="col-sm-6 "> Receiver Contact:</label>
-                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['contact']}}
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$billings->contact}}
                 </div>
                 <div class="row">
                     <label class="col-sm-6 ">Pickup date:</label>
-                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['pickup_date']}}
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$billings->pickup_date}}
                 </div>
                 <div class="row">
                     <label class="col-sm-6 ">Shipment type:</label>
-                    &nbsp;&nbsp;&nbsp;&nbsp; {{$bill['shipment_type']}}
+                    &nbsp;&nbsp;&nbsp;&nbsp; {{$billings->shipment_type}}
                 </div>
                 <div class="row">
                     <label class="col-sm-6 ">Package Type:</label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;    {{$bill['package_id']}}
+                    &nbsp;&nbsp;&nbsp;&nbsp;    {{$billings->package_id}}
 
                 </div>
 
@@ -78,7 +77,6 @@
                 </div>
             <br>
             <br>
-            @endforeach
 
 
         </div>

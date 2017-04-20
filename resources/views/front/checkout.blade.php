@@ -77,6 +77,7 @@
         <a class="waves-effect waves-light btn yellow darken-4 btn" href="/profile/{{$pickup->customer_id}}/history"><i class="material-icons right">done_all</i>Done</a>
     </div>
 
-    {!! Html::linkRoute('GetPdf',' Pdf',array($pickup->customer_id),array('class'=>' btn btn-primary fa fa-file-pdf-o', 'title'=>"View pdf"))!!}}
+{{--        {{$pickup}}--}}
+    {!! Html::linkRoute('GetPdf',' Pdf',array($pickup->id),array('class'=>' btn btn-primary fa fa-file-pdf-o', 'title'=>"View pdf")) !!}
 </div>
 @endsection
