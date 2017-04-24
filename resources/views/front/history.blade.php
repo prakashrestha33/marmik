@@ -22,40 +22,37 @@
 
         <div class="container">
             <h4 align="left" style="margin-top: 30px">History</h4>
-
+                @if(isset($pickup))
                 @foreach($pickup as $p)
                 <div class="row">
                 <div class="col s12 m12">
                     <ul class="collapsible popout" data-collapsible="accordion">
                         <li>
-
-
-
                             <div class="card collapsible-header"><i class="material-icons">filter_drama</i><b>Package Pickup Request</b><br>
-                                Date of Pickup Request: {{$p->pickup_date}}
+                                Date of Pickup Request: {{$p['pickup_date']}}
                             </div>
                             <div class="collapsible-body">
                         <span>
                             <div class="row">
 
                             <div class="col s12 m6">
-                                <b>Receiver Address:</b> {{$p->receiver_address}}
+                                <b>Receiver Address:</b> {{$p['receiver_address']}}
                             </div>
                                 <div class="col s12 m6">
-                                <b>Sender Contact:</b> {{$p->contact}}
+                                <b>Sender Contact:</b> {{$p['contact']}}
                             </div>
                         </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <b>Shipment Type:</b> {{$p->shipment_type}}
+                                    <b>Shipment Type:</b> {{$p['shiptype']}}
                                 </div>
                                 <div class="col s12 m6">
-                                    <b>Packageid:</b>{{$p->type}}
+                                    <b>Package type:</b>{{$p['packtype']}}
                                 </div>
                             </div>
                              <div class="row">
                                 <div class="col s12 m6">
-                                    <b>Package Approx. weight:</b> {{$p->weight}}kg
+                                    <b>Package Approx. weight:</b> {{$p['weight']}}kg
                                 </div>
 
                             </div>
@@ -66,6 +63,7 @@
                 </div>
                 </div>
                     @endforeach
+                    @endif
         </div>
 
 

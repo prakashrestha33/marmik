@@ -145,8 +145,9 @@
 
                     </a>
                 </li>
-                <li class="header">STAFF</li>
+
                 @role('admin')
+                <li class="header">STAFF</li>
                 <li class="treeview">
                         <a href="/admin/staff">
                             <i class="fa fa-users"></i> <span>Staff</span>

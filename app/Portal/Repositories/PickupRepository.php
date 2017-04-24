@@ -41,8 +41,9 @@ class PickupRepository
 
     public function getPickupDetailByCusid($id)
     {
-        return $this->pickup->select('*')
+        return $this->pickup->select('pickups.*','packages.type as packtype','shipment_types.name as shiptype')
             ->join('packages','packages.id','pickups.package_id')
+            ->join('shipment_types','shipment_types.id','pickups.shipment_type')
             ->where('customer_id',$id)->get()->toArray();
     }
 
