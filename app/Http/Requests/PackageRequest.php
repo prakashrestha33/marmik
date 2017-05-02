@@ -1,5 +1,7 @@
 <?php
-namespace app\Http\Requests;
+
+namespace App\Http\Requests;
+
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -10,12 +12,17 @@ class PackageRequest extends FormRequest
         return true;
     }
 
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
     public function rules()
     {
         return [
             'type' => 'required|max:50|min:5',
             'weight' => 'required|max:7|min:1',
-            'price' => 'required|max:5|min:1|float',
+            'price' => 'required|min:1|integer',
         ];
     }
 

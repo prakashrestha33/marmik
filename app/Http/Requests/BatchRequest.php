@@ -3,7 +3,7 @@ namespace app\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PackageRequest extends FormRequest
+class BatchRequest extends FormRequest
 {
     public function authorize()
     {
@@ -13,7 +13,7 @@ class PackageRequest extends FormRequest
     public function rules()
     {
         return [
-            'batch_id' => 'required|max:10|unique:batch',
+            'batch_id' => 'required|max:10|unique:batches',
         ];
     }
 
