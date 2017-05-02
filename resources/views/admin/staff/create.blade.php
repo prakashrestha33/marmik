@@ -13,7 +13,7 @@
             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="text" id="firstName" class="form-control" placeholder="First Name" name="firstName">
+                        <input type="text" id="firstName" class="form-control" required placeholder="First Name" name="firstName">
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="text" id="lastName" class="form-control" placeholder="Last Name" name="lastName">
+                        <input type="text" id="lastName" class="form-control" required placeholder="Last Name" name="lastName">
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="email" id="email" class="form-control" name="email">
+                        <input type="email" id="email" class="form-control"required  name="email">
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
                     <div class="form-line">
-                        <input type="password" id="password" class="form-control" name="password">
+                        <input type="password" id="password" class="form-control" required name="password">
                     </div>
                 </div>
             </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PackageRequest;
 use App\Portal\Services\PackageService;
 use Illuminate\Http\Request;
 
@@ -47,7 +48,7 @@ class PackageAdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PackageRequest $request)
     {
         if ($this->packageService->addPackage($request)) {
             return redirect()->route('package.index')->withSuccess("package added!");

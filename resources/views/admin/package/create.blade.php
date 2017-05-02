@@ -15,7 +15,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="type" class="form-control" placeholder="type" name="type">
+                                    <input type="text" id="type" class="form-control"  required placeholder="type" name="type">
                                 </div>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" id="weight" class="form-control" placeholder="weight in kg " name="weight">
+                                <input type="text" id="weight" class="form-control" required placeholder="weight in kg " name="weight">
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="number" id="price" class="form-control" placeholder="price " name="price">
+                                <input type="number" id="price" class="form-control"required  placeholder="price " name="price">
                             </div>
                         </div>
                     </div>
