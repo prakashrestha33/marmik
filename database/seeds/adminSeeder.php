@@ -31,8 +31,8 @@ class adminSeeder extends Seeder
         $this->admin->create([
             "firstName" => "Admin",
             "lastName" => "Admin",
-            "email" => "admin@admin.com",
-            "password" => bcrypt("admin123")
+            "email" => "admin@postracker.com",
+            "password" => bcrypt("postracker")
         ]);
     }
 }
