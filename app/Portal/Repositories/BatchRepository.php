@@ -31,6 +31,7 @@ class BatchRepository
     public function addbatch($data)
     {
         try {
+//            dd($data);
             $this->batch->create($data);
             return true;
         } catch (QueryException $e) {

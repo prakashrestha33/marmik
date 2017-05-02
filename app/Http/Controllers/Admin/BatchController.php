@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Portal\Services\BatchService;
 use Illuminate\Http\Request;
+use App\Http\Requests\BatchRequest;
 use App\Http\Controllers\Controller;
 
 class BatchController extends Controller
@@ -52,6 +53,7 @@ class BatchController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request->all());
         if ($this->batchService->addBatch($request)) {
             return redirect()->route('batch.index')->withSuccess("Batch added!");
         }

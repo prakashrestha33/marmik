@@ -25,12 +25,12 @@
 
     <style>
         .thisHeader{
-            margin-top: -20;
+            margin-top: -20px;
         }
     </style>
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-red sidebar-mini">
 
     <header class="main-header thisHeader">
         <!-- Logo -->
@@ -63,7 +63,7 @@
 
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" style="margin-right: 20px"
                                    aria-expanded="false">
                                     {{ Auth::user()->firstName }} <span class="caret"></span>
                                 </a>
@@ -99,13 +99,13 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
             <ul class="sidebar-menu">
-                <li class="header">DASHBOARD</li>
+                <li class="header">Dashboard</li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="header">SHIPMENTS</li>
+                <li class="header">Shipments</li>
                 <li class="treeview">
                     <a href="/admin/shipment">
                         <i class="fa fa-map-pin"></i> <span>Shipment</span>
@@ -117,28 +117,25 @@
 
                     </a>
                 </li>
-                <li class="header">PACKAGE</li>
                 <li class="treeview">
                     <a href="/admin/package">
                         <i class="fa fa-gift"></i> <span>Packages</span>
 
                     </a>
                 </li>
-                <li class="header">BATCH</li>
                 <li class="treeview">
                     <a href="/admin/batch">
                         <i class="fa fa-calendar-plus-o"></i> <span>Batch</span>
 
                     </a>
                 </li>
-                <li class="header">LOST PACKAGE</li>
                 <li class="treeview">
                     <a href="/admin/packages/report">
-                        <i class="fa fa-list-alt"></i> <span>Package Report</span>
+                        <i class="fa fa-list-alt"></i> <span>Package Reports</span>
 
                     </a>
                 </li>
-                <li class="header">CUSTOMER</li>
+                <li class="header">Customer</li>
                 <li class="treeview">
                     <a href="/admin/customer">
                         <i class="fa fa-users"></i> <span>Customer</span>
@@ -147,7 +144,7 @@
                 </li>
 
                 @role('admin')
-                <li class="header">STAFF</li>
+                <li class="header">Staff</li>
                 <li class="treeview">
                         <a href="/admin/staff">
                             <i class="fa fa-users"></i> <span>Staff</span>

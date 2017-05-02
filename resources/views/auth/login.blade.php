@@ -39,24 +39,11 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
-                                        <label for="test5">Remember Me</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="waves-effect waves-light btn teal">
 
                                     Login
                                 </button>
-
-                                <a class="waves-effect waves-light btn red darken-1" href="{{ route('password.request') }}">
-                                    Forgot Password
-                                </a>
                             </div>
                         </div>
                     </form>

@@ -4,7 +4,7 @@
 
     <div class="row">
     <div class="col s12 m6" style="font-size: 17px">
-    <h3 align="left" style="margin-top: 30px">Shipment </h3>
+    <h3 align="left" >Shipment </h3>
     <div class="row">
     <div class="col s12 m6">
     <b>Sender Name:</b> {{$result->customer_name}}
@@ -70,7 +70,7 @@
 
 
 @if(!isset($location))
-    <h4> The package is not shipped yet</h4>
+    <h4> The package has not shipped yet</h4>
         @else
 
 
@@ -102,7 +102,6 @@
         </script>
 
     @endif
-
 
     @endsection
 

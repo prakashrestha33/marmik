@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Portal\Services\PackageService;
 use App\Portal\Services\ShipmentService;
 use App\Portal\Services\TrackingService;
+use App\Http\Requests\PackageRequest;
 use Illuminate\Http\Request;
 
 class PackageController extends Controller
 {
-    //
 
     /**
      * @var PackageService
@@ -38,7 +38,7 @@ class PackageController extends Controller
 
         return view('front.packagecomplain',compact('package'));
     }
-    public function report(Request $request)
+    public function report(PackageRequest $request)
     {
         if ($this->packageService->addPackagereport($request)) {
             return redirect('/home')->withSuccess("package lost report added!");

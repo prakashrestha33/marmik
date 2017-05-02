@@ -28,7 +28,7 @@ class ShipmentRequest extends FormRequest
         return [
             'customer_name' => 'required|max:50|min:5',
             'receiver_name' => 'required|max:50|min:5',
-            'receiver_mobile_no' => 'required|min:7|integer',
+            'receiver_mobile_no' => 'required|min:7',
             'shipment_type' => 'required',
             'package_id' => 'required',
             'delivery_country' => 'required|min:2',
