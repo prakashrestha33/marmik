@@ -78,7 +78,7 @@ class TrackingController extends Controller
 
         } catch (Exception $e) {
 
-            return back()->withErrors('sms was not send to the customer!');
+            return back()->withErrors('SMS was not sent to the customer!');
         }
 
 

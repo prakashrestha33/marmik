@@ -47,13 +47,28 @@
                     {{ Form::text('package_id',null,array('class'=>'form-control'))}}
                 </div>
             </div>
+
+
             <div class="form-group{{ $errors->has('delivery_country') ? ' has-error' : '' }} clearfix">
                 <label for="delivery_country" class="col-sm-4 control-label">Delivery Country</label>
 
+
+            <?php $x = Config::get('country');?>
+
                 <div class="col-sm-8">
-                    {{ Form::text('delivery_country',null,array('class'=>'form-control'))}}
+                    <select name="delivery_country" class="form-control" required>
+                        <option selected="selected" disabled>Choose Country</option>
+                        @foreach($x as $code=>$name)
+                            <option value="{{$name}}">
+                                {{$name}}
+                            </option>
+                        @endforeach
+
+                    </select>
                 </div>
             </div>
+
+          
             <div class="form-group{{ $errors->has('delivery_state') ? ' has-error' : '' }} clearfix">
                 <label for="delivery_state" class="col-sm-4 control-label">Delivery State</label>
 

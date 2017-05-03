@@ -89,7 +89,7 @@
                     <select name="delivery_country" class="form-control" required>
                         <option selected="selected" disabled>Choose Country</option>
                         @foreach($x as $code=>$name)
-                            <option value="{{$code}}">
+                            <option value="{{$name}}">
                                 {{$name}}
                             </option>
                         @endforeach

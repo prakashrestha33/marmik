@@ -21,6 +21,18 @@
                 {{$shipid->receiver_name}}
             </div>
             <div class="row">
+                <label class="col-sm-6 "> Receiver no.:</label>
+                {{$shipid->receiver_mobile_no}}
+            </div>
+            <div class="row">
+                <label class="col-sm-6 "> Delivery status :</label>
+                @if($shipid->delivery_status==1)
+                    Delivered
+                    @else
+                    Not Delivered Yet
+                    @endif
+            </div>
+            <div class="row">
                 <label class="col-sm-6 "> Delivery Country :</label>
                 {{$shipid->delivery_country}}
             </div>

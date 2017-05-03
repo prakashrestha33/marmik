@@ -38,12 +38,12 @@ class PackageController extends Controller
 
         return view('front.packagecomplain',compact('package'));
     }
-    public function report(PackageRequest $request)
+    public function report(Request $request)
     {
         if ($this->packageService->addPackagereport($request)) {
-            return redirect('/home')->withSuccess("package lost report added!");
+            return redirect('/home')->withSuccess("Package Loss Report Added!");
         }
-        return back()->withErrors("Check Your Tracking Id once more");
+        return back()->withErrors("Check Your Tracking ID once more");
     }
 
     public function track()
@@ -56,9 +56,9 @@ class PackageController extends Controller
         if ($result=$this->shipmentService->getpackagebytrack($request))
         {
             $location= $this->trackingService->getlocation($result->tracking_id);
-            return view('front.tracked',compact('result','location'))->withSuccess("package tracked!");
+            return view('front.tracked',compact('result','location'))->withSuccess("Package Tracked!");
         }
-        return back()->withErrors("Check Tracking Id once more");
+        return back()->withErrors("Check Your Tracking ID once more");
     }
 
 }
