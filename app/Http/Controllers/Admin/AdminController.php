@@ -11,6 +11,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Portal\Services\AdminService;
+use App\Portal\Services\CustomerService;
+use App\Portal\Services\PackageService;
+use App\Portal\Services\PickupService;
+use App\Portal\Services\ShipmentService;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -19,16 +23,45 @@ class AdminController extends Controller
      * @var AdminService
      */
     private $adminService;
+    /**
+     * @var CustomerService
+     */
+    private $customerService;
+    /**
+     * @var ShipmentService
+     */
+    private $shipmentService;
+    /**
+     * @var PickupService
+     */
+    private $pickupService;
+    /**
+     * @var PackageService
+     */
+    private $packageService;
 
-    public function __construct(AdminService $adminService)
+    public function __construct(AdminService $adminService ,CustomerService $customerService,
+                                ShipmentService $shipmentService,PickupService $pickupService,
+                                PackageService $packageService)
     {
         $this->middleware('auth:admin');
         $this->adminService = $adminService;
+        $this->customerService = $customerService;
+        $this->shipmentService = $shipmentService;
+        $this->pickupService = $pickupService;
+        $this->packageService = $packageService;
     }
 
     public function index()
     {
-        return redirect()->route('shipment.index');
+        $customer=$this->customerService->getcustomer();
+        $shipment=$this->shipmentService->viewall();
+        $pickup= $this->pickupService->getallpickup();
+        $lostPackage=$this->packageService->getpackagereports();
+        $package=$this->packageService->getpackage();
+        $shipmenttype=$this->shipmentService->getallShipmenttype();
+
+        return view('admin',compact('customer','shipment','pickup','lostPackage','package','shipmenttype'));
 
     }
     public function indexStaff()

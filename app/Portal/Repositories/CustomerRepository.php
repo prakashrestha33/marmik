@@ -28,7 +28,7 @@ class CustomerRepository
 
     public function getCustomer()
     {
-        return $this->user->select('*')->get();
+        return $this->user->select('*')->orderBy("name")->get();
     }
 
 

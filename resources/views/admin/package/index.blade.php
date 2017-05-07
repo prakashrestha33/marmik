@@ -12,7 +12,8 @@
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('package.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Create package</span>
+                            <span class=" btn btn-success pad" title="Add new package type">
+                                <i class="fa fa-plus"> Add Package</i></span>
                         </a>
                     </div>
 
@@ -37,8 +38,8 @@
                                     <td>
                                         <a href="{{route('package.edit',$list->id)}}">
                                             <button class="btn btn-warning pad" data-toggle="popover" data-trigger="hover"
-                                                    data-placement="top" data-content="Edit the {{$list->id}} delivery">
-                                                <i class="fa fa-edit">edit</i>
+                                                    data-placement="top" data-content="Edit the {{$list->id}} package type">
+                                                <i class="fa fa-edit"> Edit</i>
                                             </button>
                                         </a>
                                     </td>

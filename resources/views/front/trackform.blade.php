@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <div class="container">
 
         {!! Form::open(array('route'=>'package.gettrack', 'method'=>'post' ))!!}

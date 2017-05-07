@@ -21,7 +21,7 @@
                 {{$shipid->receiver_name}}
             </div>
             <div class="row">
-                <label class="col-sm-6 "> Receiver no.:</label>
+                <label class="col-sm-6 "> Sender Contact no.:</label>
                 {{$shipid->receiver_mobile_no}}
             </div>
             <div class="row">

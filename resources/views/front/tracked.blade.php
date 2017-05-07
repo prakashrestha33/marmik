@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="row">
     <div class="col s12 m6" style="font-size: 17px">
     <h3 align="left" >Shipment </h3>

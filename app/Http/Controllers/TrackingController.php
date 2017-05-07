@@ -54,7 +54,7 @@ class TrackingController extends Controller
     {
         try {
         $ship= $this->shipmentService->getshipbytrackid($id);
-            $sms= 'Dear ' . $ship->customer_name.' , Your shipment with Tracking ID:'.$ship->tracking_id. ' has been delivered.Thank You';
+            $sms= 'Dear ' . $ship->customer_name.' , Your shipment with Tracking ID:'.$ship->tracking_id. ' has been delivered. Thank You';
             $args =
                 http_build_query(array(
                     'token' => env('SPARROW_TOKEN'),

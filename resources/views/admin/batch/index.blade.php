@@ -14,7 +14,8 @@
 
                     <div align="right" style="padding: 10px">
                         <a href="{{route('batch.create')}}">
-                            <span class=" btn btn-sm btn-success" title="Create new category">Send on batch</span>
+                            <span class=" btn btn-success pad" title="Create a new batch">
+                                <i class="fa fa-plus"> Add Batch</i></span>
                         </a>
                     </div>
 
@@ -34,7 +35,8 @@
                                     <td>{{$list->batch_id}}</td>
                                     <td> {{$list->tracking_id}}</td>
                                     <td>  <a href="{{route('batch.location',$list->id)}}">
-                                            <span class=" btn btn-sm btn-success" title="Batch location">Location</span>
+                                            <span class=" btn btn-warning pad" title="Batch location">
+                                                <i class="fa fa-map-pin"> Location</i></span>
                                         </a>
                                     </td>
 

@@ -101,7 +101,7 @@
             <ul class="sidebar-menu">
                 <li class="header">Dashboard</li>
                 <li class="treeview">
-                    <a href="#">
+                    <a href="/admin">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
@@ -135,6 +135,7 @@
 
                     </a>
                 </li>
+
                 <li class="header">Customer</li>
                 <li class="treeview">
                     <a href="/admin/customer">

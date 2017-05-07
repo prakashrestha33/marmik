@@ -47,4 +47,9 @@ class PickupRepository
             ->where('customer_id',$id)->get()->toArray();
     }
 
+    public function getallPickup()
+    {
+        return $this->pickup->all();
+    }
+
 }

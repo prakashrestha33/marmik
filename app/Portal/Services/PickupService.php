@@ -46,5 +46,9 @@ class PickupService
     {
         return $this->pickupRepository->getPickupDetail($id);
     }
+    public  function getallpickup()
+    {
+        return $this->pickupRepository->getallPickup();
+    }
 
 }

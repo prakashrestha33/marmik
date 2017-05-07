@@ -1,7 +1,7 @@
 <div class="row" align="center">
         <div class="box" style="padding: 10px">
 
-                <img src="/image/logo_postracker.jpg" height="55px">
+                <img src="logo_postracker.jpg" height="55px">
             <div class="box-header">
 
                 <h2 class="box-title">POSTRACKER Billing</h2>

@@ -10,12 +10,10 @@
                 <a href="#!name"><span class="white-text name">{{ Auth::user()->name }}</span></a>
                 <a href="#!email"><span class="white-text email">{{ Auth::user()->email }}</span></a>
             </div></li>
-        <li><a href="#!" class="waves-effect"><i class="material-icons">shopping_cart</i>Shipment</a></li>
-        <li><a href="#!" class="waves-effect"><i class="material-icons">redeem</i>Request Pickup</a></li>
-        <li><a href="#!" class="waves-effect"><i class="material-icons">search</i>Lost Packages</a></li>
+        <li><a href="/package/track" class="waves-effect"><i class="material-icons">shopping_cart</i>Track Package</a></li>
+        <li><a href="/package/pickup" class="waves-effect"><i class="material-icons">redeem</i>Request Pickup</a></li>
+        <li><a href="/package/lost" class="waves-effect"><i class="material-icons">search</i>Lost Packages</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="{{route('logout')}}">Log Out</a></li>
     </ul>
 
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons small">menu</i></a>

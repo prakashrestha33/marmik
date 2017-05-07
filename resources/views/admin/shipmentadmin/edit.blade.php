@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="form-group{{ $errors->has('receiver_mobile_no') ? ' has-error' : '' }} clearfix">
-                <label for="receiver_mobile_no" class="col-sm-4 control-label">Contact No.</label>
+                <label for="receiver_mobile_no" class="col-sm-4 control-label">Sender Contact No.</label>
 
                 <div class="col-sm-8">
                     {{ Form::text('receiver_mobile_no',null,array('class'=>'form-control'))}}
